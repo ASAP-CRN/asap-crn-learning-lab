@@ -5,6 +5,9 @@
 A learning hub for using **Verily Workbench** with **ASAP-CRN** data.  
 This project is designed to accelerate discoveries in Parkinson’s disease (PD) research through practical guides, curated examples, and reproducible workflows.
 
+[![Docs](https://img.shields.io/badge/Docs-live-2c7be5)](https://<your-org>.github.io/verily-workbench-learning-lab)
+
+
 ---
 
 ## Overview
