@@ -1,0 +1,38 @@
+site_name: Verily Workbench Learning Lab
+site_description: Starter guide for ASAP-CRN on Verily Workbench
+site_url: https://asap-crn.github.io/verily-workbench-learning-lab
+repo_url: https://github.com/<your-org>/verily-workbench-learning-lab
+repo_name: verily-workbench-learning-lab
+
+# Only build from /docs
+docs_dir: docs
+
+theme:
+  name: material
+  logo: images/ASAP-CRN_logo.png
+  favicon: images/favicon_ASAP-CRN.png
+  features:
+    - navigation.sections
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Glossary: glossary.md
+  - Repository: ../README.md   # Optional: exposes README as a page
