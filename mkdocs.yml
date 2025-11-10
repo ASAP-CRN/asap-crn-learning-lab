@@ -33,6 +33,3 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
-  - Glossary: glossary.md
-  - Repository: ../README.md   # Optional: exposes README as a page
