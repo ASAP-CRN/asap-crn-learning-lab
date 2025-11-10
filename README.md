@@ -1,3 +1,5 @@
+![https://parkinsonsroadmap.org/](https://parkinsonsroadmap.org/wp-content/uploads/2020/10/cropped-ASAP_Logo_FullColor@2x.png) 
+
 # Verily Workbench Learning Lab
 
 A learning hub for using **Verily Workbench** with **ASAP-CRN** data.  
