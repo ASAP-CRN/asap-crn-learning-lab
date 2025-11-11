@@ -1,6 +1,6 @@
 # Getting Started with Verily Workbench
 
-This guide walks you through the essentials of accessing and using **Verily Workbench** with **ASAP‑CRN data**. Follow the steps below to gain access, set up your workspace, review resources, launch apps, and connect a GitHub repository.
+This guide walks you through the essentials of accessing and using  **ASAP‑CRN data** on Verily Workbench. Follow the steps below to gain access, set up your workspace, review resources, launch apps, and connect a GitHub repository.
 
 ---
 
@@ -25,12 +25,10 @@ Workspaces in **[Verily Workbench](https://workbench.verily.com)** are collabora
 
 ### Access the Learning Lab Workspace
 
-The **ASAP CRN - Verily Workbench Learning Lab workspace** was created in conjunction with this [GitHub repository](https://github.com/ASAP-CRN/asap-crn-learning-lab). It provides a pre-configured environment that mirrors the tutorials, scripts, and case studies included in this Learning Lab.
+The **ASAP CRN Learning Lab workspace** was created in conjunction with this [GitHub repository](https://github.com/ASAP-CRN/asap-crn-learning-lab). It provides a pre-configured environment that mirrors the tutorials, scripts, and case studies included in this Learning Lab.
 
 **Open the workspace:**  
-[🔗 ASAP CRN – Verily Workbench Learning Lab ](https://workbench.verily.com/workspaces/asap-crn-verily-workbench-learning-lab)
-
-
+[🔗 ASAP CRN Learning Lab ](https://workbench.verily.com/workspaces/asap-crn-learning-lab)
 
 !!! note
     The shared workspace is **view-only**.  
@@ -41,7 +39,7 @@ The **ASAP CRN - Verily Workbench Learning Lab workspace** was created in conjun
 
 Duplicating the Learning Lab workspace creates your own editable copy while preserving the original as a reference. This is required for all users so you can freely explore, test, and save work without affecting the shared environment.
 
-1. Open the **[ASAP CRN Learning Lab workspace](https://workbench.verily.com/workspaces/asap-crn-verily-workbench-learning-lab)**.  
+1. Open the **[ASAP CRN Learning Lab workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab)**.  
 2. Click the **Workspace menu (⋮)** in the upper-right corner.  
      ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace.png)
 3. Select **Duplicate**.  
