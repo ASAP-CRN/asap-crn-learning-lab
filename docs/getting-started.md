@@ -41,13 +41,50 @@ Duplicating the Learning Lab workspace creates your own editable copy while pres
 
 1. Open the **[ASAP CRN Learning Lab workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab)**.  
 2. Click the **Workspace menu (⋮)** in the upper-right corner.  
-     ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace.png)
+
+     ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace.png){ width="90%" align="center" .shadow}
+
 3. Select **Duplicate**.  
 4. Enter a clear name for your copy (for example, `My-Learning-Lab-Sandbox`).  
 5. Complete the duplication dialog screens.  
-   ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace-Form.png)
+
+    ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace-Form.png){ width="90%" align="center" .shadow}
+
 6. Click **Duplicate** on the final screen. It should take less than a minute for the system to duplicate the workspace and all associated resources. Your duplicated workspace will appear under the **Workspaces** tab in the left navigation panel.
 
 !!! tip
-    Your duplicated workspace is fully independent.  
-    You can install packages, upload small test datasets, or modify notebooks without affecting the shared Learning Lab version.
+    Your duplicated workspace is fully independent. You can install packages, upload small test datasets, or modify notebooks without affecting the shared Learning Lab version.
+
+## 3. Resources
+The **Resources** tab in Verily Workbench lets you view, organize, and access data and documentation linked to your workspace. Each resource represents a connected Google Cloud Storage (GCS) bucket, dataset, or documentation file that you can browse and use in analyses.
+
+![Resources Tab Overview](images/screenshots/Verily-ResourcesTab.png){ width="90%" align="center" .shadow}
+
+---
+
+### Exploring and Navigating Resources
+
+1. From the top navigation bar, click **Resources**.  
+2. Click **Browse** to open the folder tree and explore available datasets, curated tables, and metadata files.  
+3. Select any file to open its **details panel**, where you can view size, modification date, and storage location.
+
+Common folders in this workspace include:
+
+- **Data** – core datasets and metadata tables  
+- **Multi Cohort Curated Data** – harmonized multi-cohort collections  
+- **Cohort Analysis** – processed cohort-level outputs  
+- **Team Curated Data** – data contributed by collaborating teams  
+- **ws_files** – your personal workspace storage  
+
+---
+
+### Previewing and Downloading Files
+
+Once you locate a file of interest, you can quickly view or download it without leaving the **Resources** tab.
+
+1. In the **details panel**, choose one of the following actions:
+   - **Preview** – opens a quick viewer for text, CSV, or JSON files.  
+   - **Download** – click the **⋮ (three dots)** menu next to the file name and select **Download** to save it locally.  
+
+!!! tip 
+    To open the file in **Google Cloud Platform (GCP)**, click **Open in GCP** in the upper-right corner above the details panel. This opens the linked Google Cloud Storage bucket in a new browser tab, where you can view the full directory and metadata.
