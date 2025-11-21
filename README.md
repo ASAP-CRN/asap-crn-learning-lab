@@ -26,10 +26,15 @@ asap-crn-learning-lab/
 │   ├── index.md
 │   ├── getting-started.md
 │   └── images/
+├── tutorials/
+│   ├── 00_pilot_workshop_series
+│       ├── 01_getting_started.ipynb
+│       ├── 02_data_exploration.ipynb
+│       └── 03_downstream_analysis.ipynb
 ├── mkdocs.yml
 ├── .github
-│   └──workflows
-│   └──build_docs.yml
+│   ├── workflows
+│   └── build_docs.yml
 ├── requirements-docs.txt
 ├── LICENSE                    # MIT License for code
 └── README.md                  # You are here
