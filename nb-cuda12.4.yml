@@ -1,0 +1,35 @@
+#mamba env create -f nb-cuda12.4.yml 
+
+name: nb-cuda12.4
+channels:
+- pytorch
+- nvidia
+- conda-forge
+dependencies:
+- python=3.13
+- pytorch
+- torchvision
+- torchaudio
+- pytorch-cuda=12.4
+- jax 
+- jaxlib #=*=*cuda*
+- scvi-tools
+- scanpy
+- pandas
+- anndata
+- pyarrow
+- ipykernel
+- ipywidgets
+- notebook
+- xgboost
+- click
+- pip
+- pip:
+  - pymde
+  - scikit-misc
+  - tables
+  - scib-metrics
+  - harmonypy
+  - muon
+  - faiss-gpu-cu12
+  - leidenalg
