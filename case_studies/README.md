@@ -34,12 +34,14 @@ Runnable notebook that extracts substantia nigra neurons from the full cohort ru
 8. Perform targeted manual validation of high-confidence DA cells from MapMyCells results (Manual QC for scANVI)
     - Remove low-confidence assignments
     - Confirm canonical DA markers are expressed in DA cluster & overlap with MapMyCells labels
---> OPTIONAL ADDITION Downsample labeled populations to equalize class sizes and retain highest confidence samples.
+9. Export refined MapMyCells results as round1 of gene x matrix. **This may be good enough for now.**
+    - Exporting both sum and median gene counts per cell type. Median might be best for table output on 
 10. Train & Predict with scANVI
-    - Initialize scANVI and train with curated labels.
+    **Results**:*ended up collapsing DA cluster, so would need to retrain, falling back to refined MapMyCells results*
+    - *OPTIONAL ADDITION* Downsample labeled populations to equalize class sizes and retain highest confidence samples.
+    - Initialize scANVI and train with curated labels with GPU notebook.
     - Flag or remove low confidence or ambiguous cells.
-12. Validate Labels
-    - Validate using canonical marker expression, DA score distributions, and decoupler
-    - Compute scIB to quantify performance 
-13. Export gene by cell type matrix
+13. Validate Labels 
+    - SCIB-metrics *If scANVI model is refined*
+14. Export gene by cell type matrix
     - Aggregate expression by final labels and save a gene x cell type matrix. 
