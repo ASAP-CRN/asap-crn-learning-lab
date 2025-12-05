@@ -1,6 +1,8 @@
 # README 
 
-Runnable notebook that extracts substantia nigra neurons from the full cohort runs MapMyCells with the Human-Mammalian Brain Basal Ganglia taxonomy, curates high‑confidence dopaminergic cells, fine‑tunes scANVI, validates annotations with multiple orthogonal checks, and exports a gene by cell type matrix for downstream analysis.
+Runnable notebook that extracts substantia nigra neurons from the full cohort runs MapMyCells with the Human-Mammalian Brain Basal Ganglia taxonomy, curates high‑confidence dopaminergic cells and outputs gene x cell type matrices
+
+Attempts to train a scANVI model, validate labels with scib, and export a gene by cell type matrix. *requires better scANVI model to retain rare cell type populations*
 
 ## Prerequisites
 - Environment: Conda env `scvi-cells` with `scanpy`, `scvi-tools`, `cell_type_mapper`, `mygene`,and `decoupler`.
@@ -37,7 +39,7 @@ Runnable notebook that extracts substantia nigra neurons from the full cohort ru
 9. Export refined MapMyCells results as round1 of gene x matrix. **This may be good enough for now.**
     - Exporting both sum and median gene counts per cell type. Median might be best for table output on 
 10. Train & Predict with scANVI
-    **Results**:*ended up collapsing DA cluster, so would need to retrain, falling back to refined MapMyCells results*
+    **Results**: *ended up collapsing DA cluster, so would need to retrain, falling back to refined MapMyCells results*
     - *OPTIONAL ADDITION* Downsample labeled populations to equalize class sizes and retain highest confidence samples.
     - Initialize scANVI and train with curated labels with GPU notebook.
     - Flag or remove low confidence or ambiguous cells.
