@@ -17,7 +17,8 @@ dependencies:
   - llvmlite>=0.40
   - python-igraph
   - leidenalg
-- pip:
+  - pip
+  - pip:
     - scib-metrics
     - "cell_type_mapper @ git+https://github.com/alleninstitute/cell_type_mapper.git@rc/v1.5.2"
     - "abc_atlas_access[notebooks] @ git+https://github.com/alleninstitute/abc_atlas_access.git"
