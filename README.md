@@ -4,6 +4,9 @@
 
 A practical workspace for mastering data exploration, curation, and analysis of **ASAP-CRN** datasets within **Verily Workbench**.
 
+> ** New to this workspace? Start with the setup guide on our GitHub Pages:**  
+> 👉 https://asap-crn.github.io/asap-crn-learning-lab/
+
 [![Docs](https://img.shields.io/badge/View_Guide-Live-blue)](https://asap-crn.github.io/asap-crn-learning-lab/)
 
 ---
@@ -16,6 +19,21 @@ This repository provides resources to help researchers explore and analyze **ASA
 **Future expansion:** R implementations
 
 ---
+## Project Structure
+
+### `tutorials/` — General Skill Building
+Technique- and UI-focused walkthroughs that teach fundamental skills, independent of any specific dataset.
+
+Each tutorial includes its own lightweight `environment.yml`.
+
+### `case_studies/` — Biological Analysis Modules
+Full biological workflows built around real datasets and scientific objectives.
+
+Each case study provides:
+- A more complete `environment.yml`  
+- A detailed README  
+- Domain-specific notebooks 
+--- 
 
 ## Repository Structure
 
@@ -26,11 +44,16 @@ asap-crn-learning-lab/
 │   ├── index.md
 │   ├── getting-started.md
 │   └── images/
-├── tutorials/
+├── tutorials/                 # general skill building
 │   ├── 00_pilot_workshop_series
 │       ├── 01_getting_started.ipynb
 │       ├── 02_data_exploration.ipynb
 │       └── 03_downstream_analysis.ipynb
+│       └── environment.yml # add
+├── case_studies/              # analyses with a biological objective
+│   ├── 01_SN-celltyping-analysis.ipynb 
+│       ├── environment.yml
+│       └── README.md
 ├── mkdocs.yml
 ├── .github
 │   ├── workflows
