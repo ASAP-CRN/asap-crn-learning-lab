@@ -1,0 +1,26 @@
+name: scvi-cells
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - pandas
+  - numpy<2          # for TensorFlow compatibility
+  - matplotlib
+  - seaborn
+  - pillow
+  - scanpy
+  - scvi-tools>=0.20
+  - umap-learn>=0.5.5
+  - scikit-learn>=1.2
+  - numba>=0.57
+  - llvmlite>=0.40
+  - python-igraph
+  - leidenalg
+  - pip
+  - pip:
+    - scib-metrics
+    - "cell_type_mapper @ git+https://github.com/alleninstitute/cell_type_mapper.git@rc/v1.5.2"
+    - "abc_atlas_access[notebooks] @ git+https://github.com/alleninstitute/abc_atlas_access.git"
+    - mygene
+    
