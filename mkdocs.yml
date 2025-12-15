@@ -36,4 +36,4 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  - TroubleShooting : troubleshooting.md
+  - Troubleshooting : troubleshooting.md

@@ -38,7 +38,7 @@ For detailed instructions on the access process, see the
 
 2. **Choose Your Path**  
     - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)** (3 parts) – a hands-on introduction to using Verily Workbench and performing an analysis with an example dataset.  
-    -*coming soon!*  **Case Studies** – curated examples that illustrate applied workflows and data-driven insights.
+    - *coming soon!*  **Case Studies** – curated examples that illustrate applied workflows and data-driven insights.
 
 ---
 !!! note "Data access"
