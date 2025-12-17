@@ -53,7 +53,7 @@ Verily Workbench can automatically clone linked GitHub repositories into your cl
 Once added, the repository will be automatically cloned into your app environment when the app starts.
 
 !!! note "Note"
-If your workspace was created from the Learning Lab template, the repository may already be linked. If you don’t see it listed, you can add it manually using the steps above, or link your forked repository instead.
+    If your workspace was created from the Learning Lab template, the repository may already be linked. If you don’t see it listed, you can add it manually using the steps above, or link your forked repository instead.
 
 --- 
 ### Where the repo appears inside your app
@@ -68,7 +68,8 @@ From there you can:
  - Run code directly in the environment
 
 !!! note "Note"
-If you do not see `/repos/` directory, restart your app or confirm the repository is linked in the **Apps → Repositories** section.
+    If you do not see `/repos/` directory, restart your app or confirm the repository is linked in the **Apps → Repositories** section.
+
 
 # Contributing back to the Learning Lab
 
@@ -85,6 +86,7 @@ If you find a bug, unclear documentation, or have a suggestion:
 ---
 ## Submitting Pull Requests 
 To share improvements:
+
 1. Fork the repository.
 2. Create a new branch for your changes.
 3. Make and test your updates.
@@ -94,6 +96,7 @@ Please include a short summary of what changed and why.
 
 ---
 **Best Practices**
+
 - Keep changes focused and small.
 - Follow existing structure and naming conventions.
 - Update documentation when adding new content.
