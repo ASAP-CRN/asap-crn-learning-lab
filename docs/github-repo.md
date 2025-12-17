@@ -1,11 +1,11 @@
 # Forking, Reusing, and Contributing to the Learning Lab
 
 This page explains how teams can reuse the ASAP-CRN Learning Lab, link GitHub repositories to Verily Workbench workspaces, and contribute improvements back to the shared resources.
-
+---
 ## Step 1: Get the Learning Lab Repository
 
 There are two recommended ways to use the Learning Lab, depending on how much customization you need.
-
+---
 ### Option A: Fork the Repository on Github (Recommended)
 Forking creates your team’s own copy of the repository so you can customize notebooks, docs, and workflows without affecting the upstream Learning Lab.
 
@@ -34,7 +34,7 @@ Any edits made in the workspace will persist within the app environment but will
 
 ✅ Best for: 
     Teams that want to explore, run, or lightly modify notebooks for their own analyses without maintaining a fork or contributing changes upstream.
-
+---
 ## 2. Link GitHub Repositories to Verily Workbench Workspaces
 
 Verily Workbench can automatically clone linked GitHub repositories into your cloud apps, allowing you to manage and run code directly in JupyterLab or other environments.
@@ -70,6 +70,7 @@ From there you can:
 !!! note "Note"
     If you do not see `/repos/` directory, restart your app or confirm the repository is linked in the **Apps → Repositories** section.
 
+---
 
 # Contributing back to the Learning Lab
 
@@ -102,5 +103,7 @@ Please include a short summary of what changed and why.
 - Update documentation when adding new content.
 - Ensure notebooks and code run end-to-end.
 - Do not include sensitive or private data.
+
+---
 
 If changes are highly experimental or specific to internal work, we recommend keeping them in your fork rather than submitting a PR.
