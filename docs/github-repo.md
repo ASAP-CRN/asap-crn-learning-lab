@@ -1,6 +1,6 @@
 # Forking, Reusing, and Contributing to the Learning Lab
 
-This page describes how teams can reuse the ASAP-CRN Learning Lab, connect GitHub repositories to Verily Workbench workspaces, and contribute improvements back to the shared resources.
+This page explains how teams can reuse the ASAP-CRN Learning Lab, link GitHub repositories to Verily Workbench workspaces, and contribute improvements back to the shared resources.
 
 ## Step 1: Get the Learning Lab Repository
 
@@ -37,16 +37,16 @@ Any edits made in the workspace will persist within the app environment but will
 
 ## 2. Link GitHub Repositories to Verily Workbench Workspaces
 
-Verily Workbench can automatically clone linked GitHub repositories into your cloud apps so you can manage and run source code inside JupyterLab or other environments.
+Verily Workbench can automatically clone linked GitHub repositories into your cloud apps, allowing you to manage and run code directly in JupyterLab or other environments.
 
 ### Add a repository to your workspace
 1. Open your workspace in Verily Workbench.
-2. Go to the Apps tab.
+2. Go to the **Apps** tab.
 3. Select **+ Add Repository**.
 4. Fill in:
-    - Name: a short identifier (e.g., `learning-lab`)
-    - Repository URL: 
-        - your fork URL 
+    - **Name**:** a short identifier (e.g., `learning-lab`)
+    - **Repository URL:**
+        - your fork repository URL 
         - or the upstream Learning Lab repository URL
 5. Click **Add repository** to confirm.
 
@@ -62,9 +62,42 @@ After launching **JupyterLab** (or another app), your repositories typically sho
 - `/repos/<repo-name>/...`
 
 From there you can:
+
  - Open notebooks, 
  - Edit files
  - Run code directly in the environment
 
 !!! note "Note"
 If you do not see `/repos/` directory, restart your app or confirm the repository is linked in the **Apps → Repositories** section.
+
+# Contributing back to the Learning Lab
+
+We welcome contributions that improve the Learning Lab for the broader ASAP-CRN community, including bug fixes, documentation updates, and new or improved notebooks.
+---
+
+## Reporting Issues 
+If you find a bug, unclear documentation, or have a suggestion:
+
+1. Visit the Learning Lab GitHub repository
+👉 [https://github.com/ASAP-CRN/asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab)
+2. Open a **New Issue** with a brief description and relevant context (file names, errors, screenshots).
+
+---
+## Submitting Pull Requests 
+To share improvements:
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make and test your updates.
+4. Push to your fork and open a **Pull Request**.
+
+Please include a short summary of what changed and why.
+
+---
+**Best Practices**
+- Keep changes focused and small.
+- Follow existing structure and naming conventions.
+- Update documentation when adding new content.
+- Ensure notebooks and code run end-to-end.
+- Do not include sensitive or private data.
+
+If changes are highly experimental or specific to internal work, we recommend keeping them in your fork rather than submitting a PR.
