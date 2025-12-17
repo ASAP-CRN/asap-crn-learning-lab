@@ -42,7 +42,7 @@ Any edits made in the workspace will persist within the app environment but will
 
 ---
 
-## 2. Link GitHub Repositories to Verily Workbench Workspaces
+## Step 2. Link GitHub Repositories to Verily Workbench Workspaces
 
 Verily Workbench can automatically clone linked GitHub repositories into your cloud apps, allowing you to manage and run code directly in JupyterLab or other environments.
 
@@ -79,12 +79,13 @@ From there you can:
 
 ---
 
-# Contributing back to the Learning Lab
+## Contributing back to the Learning Lab
 
 We welcome contributions that improve the Learning Lab for the broader ASAP-CRN community, including bug fixes, documentation updates, and new or improved notebooks.
+
 ---
 
-## Reporting Issues 
+### Reporting Issues 
 If you find a bug, unclear documentation, or have a suggestion:
 
 1. Visit the Learning Lab GitHub repository
@@ -92,7 +93,7 @@ If you find a bug, unclear documentation, or have a suggestion:
 2. Open a **New Issue** with a brief description and relevant context (file names, errors, screenshots).
 
 ---
-## Submitting Pull Requests 
+### Submitting Pull Requests 
 To share improvements:
 
 1. Fork the repository.
