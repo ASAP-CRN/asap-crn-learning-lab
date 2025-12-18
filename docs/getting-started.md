@@ -99,7 +99,15 @@ Your duplicated **ASAP-CRN Learning Lab workspace** should already have the **Le
 
 ### Connecting a Repo
 
-If the **ASAP-CRN Learning Lab** repository is not already linked to your workspace (or if you’d like to add another repository), you can connect it manually:
+The ASAP-CRN Learning Lab is managed in GitHub and can be linked directly to your Verily Workbench workspace. You can either use the repository as-is or fork it if you plan to customize or contribute changes.
+
+For full details on forking, reusing, and contributing with GitHub, see:
+👉 [Working with Github](github-repo.md)
+
+---
+
+**Quick Start: Link the Learning Lab Repository**
+If the Learning Lab repository is not already linked to your workspace (or if you want to add it manually):
 
 1. Open your workspace and navigate to the **Apps** tab.  
 2. Click **+ Add Repository**.  
@@ -109,6 +117,15 @@ If the **ASAP-CRN Learning Lab** repository is not already linked to your worksp
 5. Click **Add Repository** to confirm and connect.
 
 Once connected, the repository will be **automatically cloned to your app environments**, allowing you to access tutorial notebooks and scripts directly from within JupyterLab or RStudio.
+
+---
+
+### When Should I Fork?
+
+- **Fork the repository** if you plan to modify notebooks, add content, or contribute improvements.
+- **Link the upstream repository** directly if you only need to explore or lightly edit notebooks without pushing changes.
+
+(See the [Working with GitHub](github-repo.md) page for details.)
 
 ## 6. Apps
 
