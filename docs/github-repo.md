@@ -103,6 +103,9 @@ To share improvements:
 
 Please include a short summary of what changed and why.
 
+!!! note "Note" 
+    For more information on submitting a pull request from a forl see the official [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+
 ---
 **Best Practices**
 
