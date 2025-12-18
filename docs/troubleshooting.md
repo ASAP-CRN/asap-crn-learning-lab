@@ -10,6 +10,7 @@ If you experience issues while using the **ASAP-CRN Learning Lab** resources or 
 When clicking your App name or the “Launch” icon, the new tab/window opens but remains blank or shows an error.
 
 **What to Try**
+
 1. Close the blank/error window.  
 2. Relaunch the App from the Verily Workbench interface.
 
@@ -21,6 +22,7 @@ When clicking your App name or the “Launch” icon, the new tab/window opens b
 JupyterLab becomes sluggish, repeatedly shows errors, or stops responding.
 
 **What to Try**
+
 1. Restart the kernel from within JupyterLab (“Kernel” → “Restart Kernel”).  
 2. Reload the browser tab.  
 3. Save your work and restart the App from the Verily Workbench **Workspace** page.  
