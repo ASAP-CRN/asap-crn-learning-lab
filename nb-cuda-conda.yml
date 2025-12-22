@@ -9,12 +9,6 @@ dependencies:
 - ipywidgets
 - notebook
 - click
-- pip
-- pip:
-  - torch --index-url https://download.pytorch.org/whl/cpu
-  - torchvision --index-url https://download.pytorch.org/whl/cpu
-  - jax[cuda12]
-  - jaxlib #=*=*cuda*
   - scvi-tools[cuda]
   - scanpy
   - pandas
@@ -25,6 +19,13 @@ dependencies:
   - harmonypy
   - faiss-gpu-cu12
   - leidenalg
+
+- pip
+- pip:
+  - torch --index-url https://download.pytorch.org/whl/cpu
+  - torchvision --index-url https://download.pytorch.org/whl/cpu
+  - jax[cuda12]
+  - jaxlib #=*=*cuda*
   - "cell_type_mapper @ git+https://github.com/alleninstitute/cell_type_mapper.git@rc/v1.5.2"
   - "abc_atlas_access[notebooks] @ git+https://github.com/alleninstitute/abc_atlas_access.git"
   - mygene
