@@ -96,8 +96,85 @@ sn_processed_filename = local_data_path / f"asap-{dataset_team}.SN.02_processed.
 n_comps = 30
 
 # %%
+
+
+def integrate_with_scvi(
+    adata: sc.AnnData,
+    batch_key: str,
+    latent_key: str | None = None,
+) -> tuple[sc.AnnData, scvi.model.SCVI]:
+    """
+    Fit scVI model to AnnData object
+    """
+
+    # Fixed parameters
+    n_latent = 30
+    n_layers = 2
+    train_size = 0.85
+    scvi_epochs = 1000
+    batch_size = 1024
+    accelerator = "gpu"
+    dispersion = "gene-batch"  # "gene"
+    gene_likelihood = "zinb"
+    latent_distribution = "normal"
+    early_stopping = True
+    early_stopping_patience = 20
+
+    if latent_key is None:
+        latent_key = f"X_scVI"
+
+    # Set parameters based on numerical instabilities
+    threshold_cells = 3.05e6  # No. of cells in Sep 2025 PMDBS sc cohort (Lee, Hardy, Hafler, Jakobsson, Scherzer)
+    if adata.n_obs > threshold_cells:
+        plan_kwargs = {"lr": 1e-4}
+        gradient_clip_val = 5.0
+        print(f"AnnData object contains {adata.n_obs} which is > {threshold_cells}")
+        print(f"--- Using learning rate: {plan_kwargs}")
+        print(f"--- Using gradient clipping: {gradient_clip_val}")
+    else:
+        # Defaults
+        plan_kwargs = {"lr": 1e-3}
+        gradient_clip_val = None
+        print(f"AnnData object contains {adata.n_obs} which is < {threshold_cells}")
+        print(f"--- Using default learning rate: {plan_kwargs}")
+        print(f"--- Using default gradient clipping: {gradient_clip_val}")
+
+    # Integrate the data with scVI
+    # noise = ["doublet_score", "pct_counts_mt", "pct_counts_rb"]
+    categorical_covariate_keys = None
+    scvi.model.SCVI.setup_anndata(
+        adata,
+        layer="counts",
+        batch_key=batch_key,
+        # continuous_covariate_keys=noise,
+        # categorical_covariate_keys=categorical_covariate_keys,
+    )
+
+    model = scvi.model.SCVI(
+        adata,
+        n_layers=n_layers,
+        n_latent=n_latent,
+        dispersion=dispersion,
+        gene_likelihood=gene_likelihood,
+    )
+
+    model.train(
+        train_size=train_size,
+        max_epochs=scvi_epochs,
+        early_stopping=early_stopping,
+        early_stopping_patience=early_stopping_patience,
+        accelerator=accelerator,
+        gradient_clip_val=gradient_clip_val,
+        plan_kwargs=plan_kwargs,
+    )
+
+    adata.obsm[latent_key] = model.get_latent_representation()  # type: ignore
+    adata.obs["atlas_identifier"] = adata.obs.index.to_list()
+
+    return (adata, model)
+
+
 ###########
-adata = sc.read_h5ad(sn_processed_filename)
 # ## STEP 3. make SN integrate with scVI (.SN.03_scvi.h5ad)
 batch_key = "sample"
 n_layers = 2
@@ -108,30 +185,28 @@ print(torch.cuda.is_available())
 scvi.settings.seed = 0
 torch.set_float32_matmul_precision("high")
 
-# Setup SCVI on the data layer
-scvi.model.SCVI.setup_anndata(adata, layer="counts", batch_key=batch_key)
+# Set the number of data loader workers
+scvi.settings.dl_num_workers = max(1, os.cpu_count() - 1)
+print(f"Using {scvi.settings.dl_num_workers} workers")
 
-# Add the parameters of the model
-vae = scvi.model.SCVI(
-    adata, dispersion="gene-batch", n_layers=2, n_latent=30, gene_likelihood="nb"
-)
+# 0. Load data
+adata = sc.read_h5ad(sn_processed_filename)
 
-# Train the model
-vae.train(
-    max_epochs=1000, accelerator="gpu", early_stopping=True, early_stopping_patience=20
-)
+# 2. Process data
+adata, vae = integrate_with_scvi(adata, batch_key)
 
-# Extract the elbo plot of the model and save the values
-elbo = vae.history["elbo_train"]
-elbo["elbo_validation"] = vae.history["elbo_validation"]
-# elbo.to_csv(sys.argv[3], index=False)
+# %%
+
+# 3. Post-processing
+# # Extract the elbo plot of the model and save the values
+# elbo = vae.history["elbo_train"]
+# elbo["elbo_validation"] = vae.history["elbo_validation"]
+# # elbo.to_csv(sys.argv[3], index=False)
 
 # Convert the cell barcode to the observable matrix X_scvi which neighbors and UMAP can be calculated from
-adata.obs["atlas_identifier"] = adata.obs.index.to_list()
-adata.obsm["X_scvi"] = vae.get_latent_representation()
 
 # Calculate nearest neighbors and the UMAP from the X_scvi observable matrix
-sc.pp.neighbors(adata, use_rep="X_scvi")
+sc.pp.neighbors(adata, use_rep="X_scVI")
 sc.tl.umap(adata, min_dist=0.3)
 # Calculate the leiden distance from the nearest neighbors, use a couple resolutions
 sc.tl.leiden(adata, resolution=2, key_added="leiden_2")
@@ -139,12 +214,12 @@ sc.tl.leiden(adata, key_added="leiden")
 sc.tl.leiden(adata, resolution=0.5, key_added="leiden_05")
 
 
-# Save the anndata object
+# 3. Save the integrated adata and scVI model
 sn_integrated_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi.h5ad"
 
 adata.write_h5ad(sn_integrated_filename)
 
-scvi_model_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi_model.pkl"
+scvi_model_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi_model"
 
 vae.save(scvi_model_filename, overwrite=True)
 # %%

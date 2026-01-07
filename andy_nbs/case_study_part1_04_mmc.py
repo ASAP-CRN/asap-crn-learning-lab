@@ -86,9 +86,7 @@ print(f"Local data directory ready at: {local_data_path}")
 # %%
 ###########
 # %%
-sn_full_raw_filename = (
-    local_data_path / f"asap-{dataset_team}.SN.01_full_raw.h5ad"
-)
+sn_full_raw_filename = local_data_path / f"asap-{dataset_team}.SN.01_full_raw.h5ad"
 
 # %%
 sn_full_norm_filename = local_data_path / f"asap-{dataset_team}.SN.02_raw_norm.h5ad"
@@ -98,9 +96,7 @@ sn_full_norm_filename = local_data_path / f"asap-{dataset_team}.SN.02_raw_norm.h
 sn_processed_filename = local_data_path / f"asap-{dataset_team}.SN.02_processed.h5ad"
 
 # Save the anndata object
-sn_integrated_filename = (
-    local_data_path / f"asap-{dataset_team}.SN.03_scvi.h5ad"
-)
+sn_integrated_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi.h5ad"
 
 # output file neame
 sn_mmc_pheno_filename = (
@@ -121,9 +117,7 @@ adata_mmc.var_names = adata_mmc.var["gene_id"].astype(str)
 
 # 3. Ensure uniqueness
 adata_mmc.var_names_make_unique()
-sn_mmc_filename = (
-    local_data_path / f"asap-{dataset_team}.SN.04_mmc.h5ad"
-)
+sn_mmc_filename = local_data_path / f"asap-{dataset_team}.SN.04_mmc.h5ad"
 adata_mmc.write_h5ad(sn_mmc_filename)
 
 # %%
@@ -143,25 +137,34 @@ csv_dst_path = str(mapmycells_output_dir / "SN.04_mmc.human_sn_neruons_mapping.c
 output_prefix = "SN.04_mmc.human_sn"
 arg_mmc_markers = str(query_markers_filepath)
 
+n_processers = "8"
 
-args = ["--adata-input", str(adata_mmc_filename),
-        "--mmc-precomputed-stats", str(precomputed_stats_filepath),
-        "--mmc-marker-genes",str(query_markers_filepath),
-        "--n-processors", n_processers,
-        "--output-prefix", output_prefix]
+args = [
+    "--adata-input",
+    str(sn_mmc_filename),
+    "--mmc-precomputed-stats",
+    str(precomputed_stats_filepath),
+    "--mmc-marker-genes",
+    str(query_markers_filepath),
+    "--n-processors",
+    n_processers,
+    "--output-prefix",
+    output_prefix,
+]
 
 
 # run human_bg_mmc.py
 # Command with arguments
-command = [sys.executable, './mmc.py'] + args
+command = [sys.executable, "./mmc.py"] + args
+# %%
 
 try:
     result = subprocess.run(
         command,
         capture_output=True,  # Capture stdout and stderr
-        text=True,            # Decode output as text (Python 3.5+)
-        check=True,           # Raise an exception if the script returns a non-zero exit status
-        timeout=60            # Set a timeout for the command to finish (optional)
+        text=True,  # Decode output as text (Python 3.5+)
+        check=True,  # Raise an exception if the script returns a non-zero exit status
+        timeout=60,  # Set a timeout for the command to finish (optional)
     )
     print("Script output:", result.stdout)
     # print("Script errors (if any):", result.stderr) # stderr is captured if check=True raises CalledProcessError
@@ -173,6 +176,8 @@ except subprocess.TimeoutExpired:
     print("Script timed out")
 
 #######################################################
+# %%
+
 
 # Results header is the first 4 lines
 def read_csv_results(csv_results_path: str | Path) -> pd.DataFrame:
@@ -192,6 +197,112 @@ def read_csv_results(csv_results_path: str | Path) -> pd.DataFrame:
     return results
 
 
+# %%
+
+results = read_csv_results(csv_dst_path)
+results.head()
+
+# get the "Class_name" for each Neighborhood_name
+output = results.groupby("Neighborhood_name")["Class_name"].unique()
+
+# %%
+
+
+def class_assign(x):
+    if x in ["ExN", "InN", "DA"]:
+        return "neuron"
+    elif x in ["Oligo", "VC", "OPC", "Astro", "MG"]:
+        return "non-neuronal"
+
+
+neighborhood_names = [
+    "Nonneuron",
+    "Glut Sero Dopa",
+    "Subpallium GABA",
+    "Subpallium GABA-Glut",
+]
+
+class_names = [
+    "OPC-Oligo",
+    "Astro-Epen",
+    "Vascular",
+    "Immune",
+    "F M Glut",
+    "CN CGE GABA",
+    "M Dopa",
+    "F M GABA",
+    "CN MGE GABA",
+    "CN LGE GABA",
+    "Cx GABA",
+    "CN GABA-Glut",
+]
+
+
+CARD_classes = [
+    "Astro",
+    "DaN",
+    "EC",
+    "ExN",
+    "EpC",
+    "FB",
+    "InN",
+    "MG",
+    "OPC",
+    "Oligo",
+    "PC",
+    "TC",
+]
+
+
+subc_mapping = {
+    "Oligo": "oligo",
+    "OPC": "opc",
+    "ExN": "glutamatergic",
+    "InN": "gabaergic",
+    "Astro": "astrocyte",
+    "MG": "immune",
+    "VC": "blood_vessel",
+    "DA": "Dopaminergic",
+    "EC": "Endothelial",
+    "EpC": "Epithelial",
+    "PC": "Pericyte",
+    "TC": "T-cells",
+}
+
+tmp = results.groupby("Neighborhood_name")["Class_name"].unique()
+
+our_names = [
+    "Dopaminergic",
+    "Glutamatergic",
+    "GABAergic",
+    "OPC-Oligo",
+    "Astrocyte",
+    "Immune",
+    "Vascular",
+]
+
+# map Class_name directly to our_names
+
+class_mapper = {
+    "OPC-Oligo": "OPC-Oligo",
+    "Astro-Epen": "Astrocyte",
+    "Vascular": "Vascular",
+    "Immune": "Immune",
+    "F M Glut": "Glutamatergic",
+    "M Dopa": "Dopaminergic",
+    "CN CGE GABA": "GABAergic",
+    "F M GABA": "GABAergic",
+    "CN MGE GABA": "GABAergic",
+    "CN LGE GABA": "GABAergic",
+    "Cx GABA": "GABAergic",
+    "CN GABA-Glut": "GABAergic",
+}
+
+# Oligo,OPC,ExN,InN,Astro,MG,VC
+# DaN,EC,EpC,FB,PC,TC
+
+
+# %%
 def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
     # First get "classes"
     # Define row indices for each class
@@ -308,35 +419,38 @@ def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
         ]
 
     elif workflow_name == "basal_ganglia":
+        class_mapper = {
+            "OPC-Oligo": "OPC-Oligo",
+            "Astro-Epen": "Astrocyte",
+            "Vascular": "Vascular",
+            "Immune": "Immune",
+            "F M Glut": "Glutamatergic",
+            "M Dopa": "Dopaminergic",
+            "CN CGE GABA": "GABAergic",
+            "F M GABA": "GABAergic",
+            "CN MGE GABA": "GABAergic",
+            "CN LGE GABA": "GABAergic",
+            "Cx GABA": "GABAergic",
+            "CN GABA-Glut": "GABAergic",
+        }
+        #   ['Nonneuron', 'Glut Sero Dopa', 'Subpallium GABA', 'Subpallium GABA-Glut']
 
-               gabaergic = mmc_results["class_name"] == "Neuronal: GABAergic"
-        glutamatergic = mmc_results["class_name"] == "Neuronal: Glutamatergic"
-        non_neuronal = mmc_results["class_name"] == "Non-neuronal and Non-neural"
+        # map Class_name to to phenotype
+        mmc_results["phenotype"] = mmc_results["Class_name"].map(class_mapper)
 
-        mmc_results.loc[gabaergic, "phenotype"] = "GABAergic"
-        mmc_results.loc[glutamatergic, "phenotype"] = "Glutamatergic"
-        mmc_results.loc[non_neuronal, "phenotype"] = mmc_results.loc[
-            non_neuronal, "subclass_name"
-        ]
+        # fixup GABAergic rho and prob to be the Neighborhood_correlation_coefficient
+        # and Neighborhood_bootstrapping_probability
 
-        mmc_results.loc[glutamatergic, "rho"] = mmc_results.loc[
-            glutamatergic, "class_correlation_coefficient"
-        ]
+        gabaergic = mmc_results["Class_name"] == "GABAergic"
+        mmc_results["rho"] = mmc_results["Class_correlation_coefficient"]
+
         mmc_results.loc[gabaergic, "rho"] = mmc_results.loc[
-            gabaergic, "class_correlation_coefficient"
-        ]
-        mmc_results.loc[non_neuronal, "rho"] = mmc_results.loc[
-            non_neuronal, "subclass_correlation_coefficient"
+            gabaergic, "Neighborhood_correlation_coefficient"
         ]
 
-        mmc_results.loc[glutamatergic, "prob"] = mmc_results.loc[
-            glutamatergic, "class_bootstrapping_probability"
-        ]
+        mmc_results["prob"] = mmc_results["Class_bootstrapping_probability"]
         mmc_results.loc[gabaergic, "prob"] = mmc_results.loc[
-            gabaergic, "class_bootstrapping_probability"
-        ]
-        mmc_results.loc[non_neuronal, "prob"] = mmc_results.loc[
-            non_neuronal, "subclass_bootstrapping_probability"
+            gabaergic, "Neighborhood_bootstrapping_probability"
         ]
 
         mmc_results["cell_type"] = mmc_results["phenotype"]
@@ -344,6 +458,16 @@ def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
         # Change the phenotype to unknown if the correlation or bootstrap probability < 0.5
         mmc_results.loc[mmc_results["rho"] < 0.5, "cell_type"] = "Unknown"
         mmc_results.loc[mmc_results["prob"] < 0.5, "cell_type"] = "Unknown"
+
+        # rename class_name, sublcass_name, to be lowercase.abs
+        #
+        # rename Neighborhood_name, and supertype_name
+        name_mapper = {
+            "Neighborhood_name": "supertype_name",
+            "Class_name": "class_name",
+            "Subclass_name": "subclass_name",
+        }
+        mmc_results.rename(columns=name_mapper, inplace=True)
 
         return mmc_results[
             [
@@ -357,21 +481,19 @@ def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
             ]
         ]
 
-
     else:
-        raise ValueError(f"[ERROR] Source cannot be detected from workflow name: [{workflow_name}]")
-
-
+        raise ValueError(
+            f"[ERROR] Source cannot be detected from workflow name: [{workflow_name}]"
+        )
 
 
 # %%
-adata = sc.read_h5ad(sn_neuronal_full_samples_filename)
+adata = sc.read_h5ad(sn_integrated_filename)
 
 
 results = read_csv_results(csv_dst_path)
 results = summarize_mmc_results(results, "basal_ganglia")
 # Save the results to parquet file.. or feather?
-
 
 
 # output file neame
@@ -388,3 +510,5 @@ adata.obs = adata.obs.merge(results, left_index=True, right_index=True)
 # Save the adata
 adata.write_h5ad(filename=sn_mmc_pheno_filename, compression="gzip")
 
+
+# %%
