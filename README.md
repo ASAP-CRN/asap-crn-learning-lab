@@ -50,7 +50,7 @@ asap-crn-learning-lab/
 │       ├── 01_getting_started.ipynb
 │       ├── 02_data_exploration.ipynb
 │       └── 03_downstream_analysis.ipynb
-│       └── environment.yml # add
+│       └── environment.yml
 ├── case_studies/              # analyses with a biological objective
 │   ├── 01_SN-celltyping-analysis.ipynb 
 │       ├── environment.yml
