@@ -303,10 +303,17 @@ class_mapper = {
 
 
 # %%
-def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
+def summarize_mmc_results(
+    mmc_results: pd.DataFrame,
+    workflow_name: str,
+    rho_cut: float = 0.5,
+    prob_cut: float = 0.5,
+    aggregation: bool = False,
+):
     # First get "classes"
     # Define row indices for each class
     # HUMAN
+
     if workflow_name == "pmdbs_sc_rnaseq":
         gabaergic = mmc_results["class_name"] == "Neuronal: GABAergic"
         glutamatergic = mmc_results["class_name"] == "Neuronal: Glutamatergic"
@@ -448,16 +455,27 @@ def summarize_mmc_results(mmc_results: pd.DataFrame, workflow_name: str):
             gabaergic, "Neighborhood_correlation_coefficient"
         ]
 
-        mmc_results["prob"] = mmc_results["Class_bootstrapping_probability"]
-        mmc_results.loc[gabaergic, "prob"] = mmc_results.loc[
-            gabaergic, "Neighborhood_bootstrapping_probability"
-        ]
+        prob_col = (
+            "Class_bootstrapping_probability"
+            if not aggregation
+            else "Class_aggregate_probability"
+        )
+
+        mmc_results["prob"] = mmc_results[prob_col]
+
+        prob_col = (
+            "Neighborhood_bootstrapping_probability"
+            if not aggregation
+            else "Neighborhood_aggregate_probability"
+        )
+
+        mmc_results.loc[gabaergic, "prob"] = mmc_results.loc[gabaergic, prob_col]
 
         mmc_results["cell_type"] = mmc_results["phenotype"]
 
         # Change the phenotype to unknown if the correlation or bootstrap probability < 0.5
-        mmc_results.loc[mmc_results["rho"] < 0.5, "cell_type"] = "Unknown"
-        mmc_results.loc[mmc_results["prob"] < 0.5, "cell_type"] = "Unknown"
+        mmc_results.loc[mmc_results["rho"] < rho_cut, "cell_type"] = "Unknown"
+        mmc_results.loc[mmc_results["prob"] < prob_cut, "cell_type"] = "Unknown"
 
         # rename class_name, sublcass_name, to be lowercase.abs
         #
@@ -511,4 +529,73 @@ adata.obs = adata.obs.merge(results, left_index=True, right_index=True)
 adata.write_h5ad(filename=sn_mmc_pheno_filename, compression="gzip")
 
 
+# %%
+
+# %%
+adata = sc.read_h5ad(sn_integrated_filename)
+
+results_v2 = read_csv_results(csv_dst_path)
+results_v2 = summarize_mmc_results(
+    results_v2, "basal_ganglia", rho_cut=0.25, prob_cut=0.5
+)
+# Save the results to parquet file.. or feather?
+
+
+# output file neame
+
+sn_mmc_pheno_parquet_filename_v2 = (
+    local_data_path / f"asap-{dataset_team}.SN.04_mmpc_phenotype_v2.parquet"
+)
+results_v2.to_parquet(sn_mmc_pheno_parquet_filename_v2, compression="gzip")
+
+
+adata.obs = adata.obs.merge(results_v2, left_index=True, right_index=True)
+
+
+# Save the adata
+
+sn_mmc_pheno_filename_v2 = (
+    local_data_path / f"asap-{dataset_team}.SN.04_mmc_processed_v2.h5ad"
+)
+adata.write_h5ad(filename=sn_mmc_pheno_filename_v2, compression="gzip")
+
+
+# %%
+adata = sc.read_h5ad(sn_integrated_filename)
+
+results_v3 = read_csv_results(csv_dst_path)
+results_v3 = summarize_mmc_results(
+    results_v3, "basal_ganglia", rho_cut=0.25, prob_cut=0.5, aggregation=True
+)
+# Save the results to parquet file.. or feather?
+
+
+# output file neame
+
+sn_mmc_pheno_parquet_filename_v3 = (
+    local_data_path / f"asap-{dataset_team}.SN.04_mmpc_phenotype_v3.parquet"
+)
+results_v3.to_parquet(sn_mmc_pheno_parquet_filename_v3, compression="gzip")
+
+
+adata.obs = adata.obs.merge(results_v3, left_index=True, right_index=True)
+# Save the adata
+sn_mmc_pheno_filename_v3 = (
+    local_data_path / f"asap-{dataset_team}.SN.04_mmc_processed_v3.h5ad"
+)
+adata.write_h5ad(filename=sn_mmc_pheno_filename_v3, compression="gzip")
+
+
+# %%
+
+# look at the results
+results["cell_type"].value_counts()
+
+# %%
+
+# look at the results
+results_v2["cell_type"].value_counts()
+# %%
+# look at the results
+results_v3["cell_type"].value_counts()
 # %%
