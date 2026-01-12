@@ -1,33 +1,6 @@
 # %%
-
 # compose SN subset dataset for further analysis
 ####################################
-########### PART 0: make subset
-####################################
-# case_study_part0.py. (this file)
-
-####################################
-########### PART 1: OG process (sc_wf)
-####################################
-# case_study_part1_og_process.py
-
-
-####################################
-########### PART 2: OG basal-ganglia 
-####################################
-# case_study_part2_og_basal_ganglia.py
-
-####################################
-########### PART 3: CARD process decoupler 
-####################################
-# case_study_part3_decoupler.py
-
-
-####################################
-########### PART 4: comparisions 
-####################################
-# case_study_part4_comparisons.py
-
 
 # %%
 ##
@@ -35,11 +8,6 @@
 # pip3 install -U scib-metrics
 #
 #
-####################################
-########### PART 1: OG process (sc_wf)
-####################################
-# case_study_part1_og_process.py
-
 
 
 ####################################
@@ -403,6 +371,7 @@ l_full_adata_filename = (
 
 # Load full expression matrix
 full_adata = sc.read_h5ad(l_full_adata_filename, backed="r")
+full_adata.var_names_make_unique()
 
 #%%
 # Extract and select neuronal_subset cells from complete gene expression matrix

@@ -132,10 +132,10 @@ def label_with_scanvi(
     """
 
     # Fixed parameters
-    scanvi_epochs = 300
+    scanvi_epochs = 1000
     batch_size = 1024
     accelerator = "gpu"
-    dispersion = "gene-cell"  # "gene"
+    dispersion = "gene-batch"  # "gene"
     gene_likelihood = "zinb"
     latent_distribution = "normal"
     early_stopping = True

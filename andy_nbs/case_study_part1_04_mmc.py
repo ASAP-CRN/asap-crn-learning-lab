@@ -103,6 +103,7 @@ sn_mmc_pheno_filename = (
     local_data_path / f"asap-{dataset_team}.SN.04_mmc_processed.h5ad"
 )
 
+sn_mmc_filename = local_data_path / f"asap-{dataset_team}.SN.04_mmc.h5ad"
 
 # have to use ENSG ids for this mapmycells taxonomy
 # prep data
@@ -117,7 +118,6 @@ adata_mmc.var_names = adata_mmc.var["gene_id"].astype(str)
 
 # 3. Ensure uniqueness
 adata_mmc.var_names_make_unique()
-sn_mmc_filename = local_data_path / f"asap-{dataset_team}.SN.04_mmc.h5ad"
 adata_mmc.write_h5ad(sn_mmc_filename)
 
 # %%
@@ -426,6 +426,48 @@ def summarize_mmc_results(
         ]
 
     elif workflow_name == "basal_ganglia":
+        # just use the Class_name
+        mmc_results["phenotype"] = mmc_results["Class_name"]
+
+        mmc_results["rho"] = mmc_results["Class_correlation_coefficient"]
+
+        prob_col = (
+            "Class_bootstrapping_probability"
+            if not aggregation
+            else "Class_aggregate_probability"
+        )
+
+        mmc_results["prob"] = mmc_results[prob_col]
+
+        mmc_results["cell_type"] = mmc_results["phenotype"]
+
+        # Change the phenotype to unknown if the correlation or bootstrap probability < 0.5
+        mmc_results.loc[mmc_results["rho"] < rho_cut, "cell_type"] = "Unknown"
+        mmc_results.loc[mmc_results["prob"] < prob_cut, "cell_type"] = "Unknown"
+
+        # rename class_name, sublcass_name, to be lowercase.abs
+        #
+        # rename Neighborhood_name, and supertype_name
+        name_mapper = {
+            "Neighborhood_name": "supertype_name",
+            "Class_name": "class_name",
+            "Subclass_name": "subclass_name",
+        }
+        mmc_results.rename(columns=name_mapper, inplace=True)
+
+        return mmc_results[
+            [
+                "cell_type",
+                "phenotype",
+                "rho",
+                "prob",
+                "class_name",
+                "subclass_name",
+                "supertype_name",
+            ]
+        ]
+
+    elif workflow_name == "basal_ganglia_v2":
         class_mapper = {
             "OPC-Oligo": "OPC-Oligo",
             "Astro-Epen": "Astrocyte",
@@ -510,7 +552,7 @@ adata = sc.read_h5ad(sn_integrated_filename)
 
 
 results = read_csv_results(csv_dst_path)
-results = summarize_mmc_results(results, "basal_ganglia")
+results = summarize_mmc_results(results, "basal_ganglia", rho_cut=0.2, prob_cut=0.5)
 # Save the results to parquet file.. or feather?
 
 
@@ -530,13 +572,12 @@ adata.write_h5ad(filename=sn_mmc_pheno_filename, compression="gzip")
 
 
 # %%
-
-# %%
+#################################
 adata = sc.read_h5ad(sn_integrated_filename)
 
 results_v2 = read_csv_results(csv_dst_path)
 results_v2 = summarize_mmc_results(
-    results_v2, "basal_ganglia", rho_cut=0.25, prob_cut=0.5
+    results_v2, "basal_ganglia", rho_cut=0.4, prob_cut=0.5
 )
 # Save the results to parquet file.. or feather?
 
@@ -553,7 +594,6 @@ adata.obs = adata.obs.merge(results_v2, left_index=True, right_index=True)
 
 
 # Save the adata
-
 sn_mmc_pheno_filename_v2 = (
     local_data_path / f"asap-{dataset_team}.SN.04_mmc_processed_v2.h5ad"
 )
@@ -561,11 +601,12 @@ adata.write_h5ad(filename=sn_mmc_pheno_filename_v2, compression="gzip")
 
 
 # %%
+#################################
 adata = sc.read_h5ad(sn_integrated_filename)
 
 results_v3 = read_csv_results(csv_dst_path)
 results_v3 = summarize_mmc_results(
-    results_v3, "basal_ganglia", rho_cut=0.25, prob_cut=0.5, aggregation=True
+    results_v3, "basal_ganglia", rho_cut=0.5, prob_cut=0.5, aggregation=False
 )
 # Save the results to parquet file.. or feather?
 

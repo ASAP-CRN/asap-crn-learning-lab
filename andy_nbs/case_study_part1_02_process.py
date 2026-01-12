@@ -90,7 +90,7 @@ adata = sc.read_h5ad(sn_full_raw_filename)
 # %%
 # Make a raw counts layer
 adata.layers['counts'] = adata.X.copy()
-adata.raw = adata
+adata.raw = adata.copy()
 # %%
 # Calculate QC metrics
 ## do we need to re-do this?
@@ -111,6 +111,10 @@ sn_full_norm_filename = (
 adata.write_h5ad(sn_full_norm_filename)
 
 # %%
+sn_full_norm_filename = (
+    local_data_path / f"asap-{dataset_team}.SN.02_raw_norm.h5ad"
+)
+adata = sc.read_h5ad(sn_full_norm_filename)
 ###########
 # ## STEP 2. make SN processed (HVG + normalized). (.SN.02_processed.h5ad)
 # # Open the RNA merged and filtered
@@ -132,11 +136,21 @@ sc.pp.filter_genes(adata, min_cells=min_cells)
 
 #TODO:
 # double-chck against marker genes?
+hvg = adata.var['highly_variable']
+hvgs = adata.var[hvg].index.tolist()
+# %%
+# load the GP2 GWAS target genes for comparison of HVG
+targets = pd.read_csv("./genes_by_locus.csv")
+target_genes = targets["GENE"].tolist()
 
+# %%
+# get the intersection between hvgs and target genes
+overlap = set(hvgs).intersection(set(target_genes))
 
+adata.var["overlap"] = adata.var.index.isin(overlap)
+adata.var["gwas_target"] = adata.var.index.isin(target_genes)
 
-# 
-
+keep_genes = set(hvgs) | set(target_genes)
 # Make a copy of the AnnData atlas that only contains variable genes
 filtered_adata = adata[:, (adata.var['highly_variable']) & ~(adata.var['mt']) & ~(adata.var['rb'])].copy()
 
@@ -153,8 +167,13 @@ sn_processed_filename = (
     local_data_path / f"asap-{dataset_team}.SN.02_processed.h5ad"
 )
 
-adata.write_h5ad(sn_processed_filename)
+filtered_adata.write_h5ad(sn_processed_filename)
+
 
 #%%
+#################################
+adata = sc.read_h5ad(sn_processed_filename)
 
-
+# %%
+sn_full_norm_filename
+adata = sc.read_h5ad(sn_full_norm_filename)

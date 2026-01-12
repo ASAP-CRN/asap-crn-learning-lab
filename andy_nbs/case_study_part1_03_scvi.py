@@ -92,6 +92,8 @@ sn_full_norm_filename = local_data_path / f"asap-{dataset_team}.SN.02_raw_norm.h
 # %%
 ###########
 sn_processed_filename = local_data_path / f"asap-{dataset_team}.SN.02_processed.h5ad"
+sn_integrated_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi.h5ad"
+sn_scvi_full_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi_full.h5ad"
 
 n_comps = 30
 
@@ -197,13 +199,6 @@ adata, vae = integrate_with_scvi(adata, batch_key)
 
 # %%
 
-# 3. Post-processing
-# # Extract the elbo plot of the model and save the values
-# elbo = vae.history["elbo_train"]
-# elbo["elbo_validation"] = vae.history["elbo_validation"]
-# # elbo.to_csv(sys.argv[3], index=False)
-
-# Convert the cell barcode to the observable matrix X_scvi which neighbors and UMAP can be calculated from
 
 # Calculate nearest neighbors and the UMAP from the X_scvi observable matrix
 sc.pp.neighbors(adata, use_rep="X_scVI")
@@ -223,3 +218,30 @@ scvi_model_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi_model"
 
 vae.save(scvi_model_filename, overwrite=True)
 # %%
+# 3. Post-processing
+# # Extract the elbo plot of the model and save the values
+# elbo = vae.history["elbo_train"]
+# elbo["elbo_validation"] = vae.history["elbo_validation"]
+# # elbo.to_csv(sys.argv[3], index=False)
+
+unfiltered_adata = adata.raw.to_adata()
+unfiltered_adata.obs = adata.obs
+
+unfiltered_adata.var_names_make_unique()
+
+# %%
+# make sure we have X_scVI
+
+# Convert the cell barcode to the observable matrix X_scvi which neighbors and UMAP can be calculated from
+
+# Calculate nearest neighbors and the UMAP from the X_scvi observable matrix
+sc.pp.neighbors(unfiltered_adata, use_rep="X_scVI")
+sc.tl.umap(unfiltered_adata, min_dist=0.3)
+# Calculate the leiden distance from the nearest neighbors, use a couple resolutions
+sc.tl.leiden(unfiltered_adata, resolution=2, key_added="leiden_2")
+sc.tl.leiden(unfiltered_adata, key_added="leiden")
+sc.tl.leiden(unfiltered_adata, resolution=0.5, key_added="leiden_05")
+
+
+sn_scvi_full_filename = local_data_path / f"asap-{dataset_team}.SN.03_scvi_full.h5ad"
+unfiltered_adata.write_h5ad(sn_scvi_full_filename)

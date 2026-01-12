@@ -122,6 +122,7 @@ vae = scvi.model.SCVI.load(scvi_model_filename)
 
 
 # %%
+# %%
 def label_with_scanvi(
     adata: sc.AnnData,
     model: scvi.model.SCVI,
@@ -135,10 +136,10 @@ def label_with_scanvi(
     """
 
     # Fixed parameters
-    scanvi_epochs = 300
+    scanvi_epochs = 1000
     batch_size = 1024
     accelerator = "gpu"
-    dispersion = "gene-cell"  # "gene"
+    dispersion = "gene-batch"  # "gene"
     gene_likelihood = "zinb"
     latent_distribution = "normal"
     early_stopping = True
@@ -224,4 +225,7 @@ output_cell_types_file = (
 
 adata.obs[[predictions_key]].to_parquet(output_cell_types_file, compression="gzip")
 
+# %%
+scanvi_model.history["elbo_train"].plot(figsize=(5, 3))
+scanvi_model.history["elbo_validation"].plot(figsize=(5, 3))
 # %%
