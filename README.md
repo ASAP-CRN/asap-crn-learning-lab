@@ -20,21 +20,6 @@ This repository provides resources to help researchers explore and analyze **ASA
 **Future expansion:** R implementations
 
 ---
-## Project Structure
-
-#### `tutorials/` — General Skill Building
-Technique- and UI-focused walkthroughs that teach fundamental skills, independent of any specific dataset.
-
-Each tutorial includes its own lightweight `environment.yml`.
-
-#### `case_studies/` — Biological Analysis Modules
-Full biological workflows built around real datasets and scientific objectives.
-
-Each case study provides:
-- A more complete `environment.yml`  
-- A detailed README  
-- Domain-specific notebooks 
---- 
 
 ## Repository Structure
 
