@@ -14,7 +14,9 @@ A practical workspace for mastering data exploration, curation, and analysis of 
 
 ## Overview
 
-This repository provides resources to help researchers explore and analyze **ASAP-CRN** datasets on **Verily Workbench**. The ASAP CRN Learning Lab is organized as a progressive but flexible learning path. You can follow it step-by-step from beginner to advanced topics, or jump directly to the sections that best fit your research needs.
+This repository provides **ASAP-CRN–curated learning resources** designed to support exploration, analysis, and reuse of ASAP CRN datasets within the ASAP CRN Cloud ecosystem, including analysis workflows on Verily Workbench.
+
+The ASAP CRN Learning Lab is structured as a progressive yet flexible learning path that reflects the end-to-end ASAP-CRN data lifecycle—from data discovery and access to analysis and contribution. Users may follow the curriculum sequentially or navigate directly to sections most relevant to their research needs.
 
 **Current focus:** Python  
 **Future expansion:** R implementations
