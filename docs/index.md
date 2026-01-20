@@ -9,22 +9,21 @@ This site offers a **progressive, modular learning path**: start at the beginnin
 
 ---
 
-## Prerequisite: Data Access
+## Prerequisite: ASAP CRN Cloud Data Access
+The ASAP CRN Cloud is the **central platform** for data access, metadata review, and permissions management across the CRN ecosystem. Before you begin any analysis in Verily Workbench, you must first obtain access to the relevant ASAP CRN data collections through the ASAP CRN Cloud.
 
-Before you begin, make sure you have access to the **ASAP CRN data collections** on Verily Workbench. Access to these datasets is managed through the **Aligning Science Across Parkinson’s (ASAP)** data access system.
+Requesting Access via the ASAP CRN Cloud:
 
-To request access:
-
-1. Go to the portal below.  
-🔗 [ASAP CRN Data Portal](https://cloud.parkinsonsroadmap.org/collections)
-2. Click **Log In** in the upper right corner.  
+1. Navigate to the ASAP CRN Cloud Data Portal:  
+🔗 [ASAP CRN Cloud - Data Collections](https://cloud.parkinsonsroadmap.org/collections)
+2. Click **Log In** in the upper right corner and log in with either a google or microsoft account.  
 3. Select any collection tile and choose **Apply for Access**. 
 4. Fill out the application form with your appropriate information.
 
-Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the **ASAP CRN Cloud** and **Verily Workbench**.
+Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the **ASAP CRN Cloud**.
 
 !!! warning "Access required"
-    You will not be able to use ASAP CRN data or workspaces until your data access request has been approved.
+    You will not be able to use ASAP CRN data or Verily workspaces until your data access request has been approved.
 
 For detailed instructions on the access process, see the  
 📘 [ASAP CRN Cloud User Manual (PDF)](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf)
