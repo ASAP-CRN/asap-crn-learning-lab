@@ -35,6 +35,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Working with Verily Workbench: getting-started.md
   - Working with GitHub: github-repo.md
   - Troubleshooting : troubleshooting.md
