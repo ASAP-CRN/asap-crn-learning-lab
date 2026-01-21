@@ -13,7 +13,7 @@ Reproducible analysis examples for leveraging ASAP-CRN data to spark new discove
 
 ## Overview
 
-The ASAP-CRN Learning Lab is an ASAP-CRN–maintained resource that enables researchers to leverage CRN Cloud data through reproducible exploratory and meta-analysis examples. Users may engage via workshops, follow a guided learning path, or start directly with the modules and models most relevant to their research.
+The ASAP-CRN Learning Lab is an ASAP-CRN–maintained resource that enables researchers to leverage CRN Cloud data through reproducible exploratory and meta-analysis examples. Users may engage via workshops or start directly with the modules most relevant to their research.
 
 ---
 
