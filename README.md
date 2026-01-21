@@ -50,8 +50,8 @@ asap-crn-learning-lab/
 │   ├── workflows
 │   └── build_docs.yml
 ├── requirements-docs.txt
-├── LICENSE                    # MIT License for code
-└── README.md                  # You are here
+├── LICENSE                 
+└── README.md             
 ```
 ---
 
