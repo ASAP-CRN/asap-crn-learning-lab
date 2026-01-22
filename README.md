@@ -2,7 +2,7 @@
 
 # ASAP CRN Learning Lab
 
-Reproducible analysis examples for leveraging ASAP-CRN data to spark new discoveries in Parkinson’s disease.
+Reproducible tutorials and analysis examples for working with ASAP CRN data to spark new discoveries in Parkinson’s disease.
 
 > **New to the ASAP-CRN Cloud and Learning Lab? Start with the setup guide on our GitHub Pages:**  
 > 👉 https://asap-crn.github.io/asap-crn-learning-lab/
@@ -13,19 +13,20 @@ Reproducible analysis examples for leveraging ASAP-CRN data to spark new discove
 
 ## Overview
 
-The ASAP-CRN Learning Lab is an ASAP-CRN–maintained resource that enables researchers to leverage CRN Cloud data through reproducible exploratory and meta-analysis examples. Users may engage via workshops or start directly with the modules most relevant to their research.
+The ASAP CRN Learning Lab is designed to facilitate exploration and analysis of CRN Cloud data through reproducible exploratory and meta-analysis examples. Users may engage via workshops or start directly with the modules most relevant to their research.
 
 ---
 
 ## Prerequisite: Data Access
 
-All datasets used in this Learning Lab are accessed through the **[Aligning Science Across Parkinson’s (ASAP) Collaborative Research Network (CRN)](https://cloud.parkinsonsroadmap.org/collections)**.
+All datasets used in this Learning Lab are accessed through the **[Aligning Science Across Parkinson’s (ASAP) Collaborative Research Network (CRN) Cloud](https://cloud.parkinsonsroadmap.org/collections)**.
 
 Before running any tutorials or case studies, users must request and receive approval for the relevant **ASAP-CRN data collections** via the CRN Cloud portal. Once approved, datasets can be accessed within supported analysis environments, including Verily Workbench.
 
 For detailed instructions, please see the [ASAP CRN Cloud User Manual](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf).
 
 ---
+
 ## Repository Structure
 
 ```plaintext
