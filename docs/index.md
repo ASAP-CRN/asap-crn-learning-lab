@@ -3,12 +3,11 @@
 
 # ASAP CRN Learning Lab
 
-Welcome to the **ASAP CRN Learning Lab**, a resource designed to support researchers working with **ASAP CRN
-** (Aligning Science Across Parkinson’s Collaborative Research Network) data. 
+Welcome to the **ASAP CRN Learning Lab**, a resource designed to support researchers working with **ASAP CRN** (Aligning Science Across Parkinson’s Collaborative Research Network) data. 
 
 This site offers a **progressive, modular learning path**: start at the beginning for a full onboarding experience, or dive directly into the sections most relevant to your work. 
 
-You can access all tutorials and resources on the [asap-crn-learning-lab Github Repo](https://github.com/ASAP-CRN/asap-crn-learning-lab)
+You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
 
 ---
 
@@ -24,13 +23,10 @@ Requesting Access via the ASAP CRN Cloud:
 3. Select any collection tile and choose **Apply for Access**. 
 4. Fill out the application form with your appropriate information.
 
-Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the **ASAP CRN Cloud**.
+Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the ASAP CRN Cloud.
 
 !!! warning "Access required"
     You will not be able to access ASAP CRN data or run analyses in Verily Workbench until your data access request has been approved through the ASAP CRN Cloud.
-
-!!! note "ASAP-CRN data workflow"
-    **Discover & request access** in the ASAP CRN Cloud → **Analyze data** using reproducible workflows in Verily Workbench.
 
 For detailed instructions on the access process, see the  
 📘 [ASAP CRN Cloud User Manual (PDF)](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf)
@@ -38,6 +34,9 @@ For detailed instructions on the access process, see the
 ---
 
 ## Start Here
+
+!!! note "ASAP CRN data workflow"
+    **Request access & discover data** in the ASAP CRN Cloud → **Analyze data** in Verily Workbench.
 
 1. **Read the Starter Guide**  
    Begin with [Getting Started with Verily Workbench](getting-started.md) to learn how to connect to Verily Workbench and set up your workspace.
@@ -49,4 +48,4 @@ For detailed instructions on the access process, see the
 ---
 !!! note "Data access"
     This site does not distribute ASAP CRN data.  Access is managed through the [ASAP CRN Data Portal](https://cloud.parkinsonsroadmap.org/collections).  
-    For access steps, see [Prerequisite: Data Access](#prerequisite-data-)
+    For access steps, see [Prerequisite: Data Access](#prerequisite-asap-crn-cloud-data-access)
