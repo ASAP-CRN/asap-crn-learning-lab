@@ -1,6 +1,11 @@
 # Getting Started with Verily Workbench
 
-This guide walks you through the essentials of accessing and preparing your workspace **Verily Workbench**. Follow the steps below to gain access, set up your workspace, review resources, launch apps, and connect a GitHub repository.
+
+The **ASAP CRN Cloud** serves as the central platform for discovering, accessing, and governing ASAP-CRN data collections. Once access to a data collection has been approved through the ASAP CRN Cloud, analyses are conducted in **Verily Workbench**, the preferred analysis environment for all ASAP-CRN datasets.
+
+This guide walks you through the essentials of working in Verily Workbench, including how to access the ASAP-CRN reference workspace, set up your own workspace, review available resources, launch analysis apps, and connect external resources such as GitHub repositories.
+
+New users are encouraged to begin with the **ASAP-CRN reference workspace** on Verily Workbench, which provides documentation, example analyses, and recommended workflows aligned with ASAP-CRN standards. Once familiar, you may choose to create a clean workspace and add references to approved ASAP-CRN data collections for your own analyses.
 
 ---
 

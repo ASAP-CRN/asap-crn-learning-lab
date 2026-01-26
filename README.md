@@ -2,10 +2,9 @@
 
 # ASAP CRN Learning Lab
 
-A practical workspace for mastering data exploration, curation, and analysis of **ASAP-CRN** datasets within **Verily Workbench**.
+Reproducible tutorials and analysis examples for working with ASAP CRN data to spark new discoveries in Parkinson’s disease.
 
-
-> **New to this workspace? Start with the setup guide on our GitHub Pages:**  
+> **New to the ASAP-CRN Cloud and Learning Lab? Start with the setup guide on our GitHub Pages:**  
 > 👉 https://asap-crn.github.io/asap-crn-learning-lab/
 
 [![Docs](https://img.shields.io/badge/View_Guide-Live-blue)](https://asap-crn.github.io/asap-crn-learning-lab/)
@@ -14,27 +13,19 @@ A practical workspace for mastering data exploration, curation, and analysis of 
 
 ## Overview
 
-This repository provides resources to help researchers explore and analyze **ASAP-CRN** datasets on **Verily Workbench**. The ASAP CRN Learning Lab is organized as a progressive but flexible learning path. You can follow it step-by-step from beginner to advanced topics, or jump directly to the sections that best fit your research needs.
-
-**Current focus:** Python  
-**Future expansion:** R implementations
+The ASAP CRN Learning Lab is designed to facilitate exploration and analysis of CRN Cloud data through reproducible exploratory and meta-analysis examples. Users may engage via workshops or start directly with the modules most relevant to their research.
 
 ---
-## Project Structure
 
-#### `tutorials/` — General Skill Building
-Technique- and UI-focused walkthroughs that teach fundamental skills, independent of any specific dataset.
+## Prerequisite: Data Access
 
-Each tutorial includes its own lightweight `environment.yml`.
+All datasets used in this Learning Lab are accessed through the **[Aligning Science Across Parkinson’s (ASAP) Collaborative Research Network (CRN) Cloud](https://cloud.parkinsonsroadmap.org/collections)**.
 
-#### `case_studies/` — Biological Analysis Modules
-Full biological workflows built around real datasets and scientific objectives.
+Before running any tutorials or case studies, users must request and receive approval for the relevant **ASAP-CRN data collections** via the CRN Cloud portal. Once approved, datasets can be accessed within supported analysis environments, including Verily Workbench.
 
-Each case study provides:
-- A more complete `environment.yml`  
-- A detailed README  
-- Domain-specific notebooks 
---- 
+For detailed instructions, please see the [ASAP CRN Cloud User Manual](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf).
+
+---
 
 ## Repository Structure
 
@@ -60,14 +51,15 @@ asap-crn-learning-lab/
 │   ├── workflows
 │   └── build_docs.yml
 ├── requirements-docs.txt
-├── LICENSE                    # MIT License for code
-└── README.md                  # You are here
+├── LICENSE                 
+└── README.md             
 ```
 ---
 
 ## Contributing
 
-We welcome and encourage contributions!  
+We welcome and encourage contributions from the ASAP-CRN community and the broader research ecosystem.
+
 - Found a typo? Submit a pull request.  
 - Have a new dataset or tutorial idea? Open an issue.  
 ---
