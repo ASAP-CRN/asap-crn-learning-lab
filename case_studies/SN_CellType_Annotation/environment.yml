@@ -1,4 +1,4 @@
-name: scvi-cells
+name: sn_celltyping
 channels:
   - conda-forge
 dependencies:
