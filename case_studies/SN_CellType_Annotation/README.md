@@ -14,9 +14,9 @@ Attempts to train a scANVI model, validate labels with scib, and export a gene b
         conda env create -f environment.yml
         conda init 
         ## at this point restart your terminal
-        conda activate scvi-cells
+        conda activate sn_celltyping
         # ensure jupyter can recognize the new conda environemnt
-        python -m ipykernel install --user --name=scvi-cells --display -name "Python (scvi-cells)"
+        python -m ipykernel install --user --name=sn_celltyping --display -name "Python (sn_celltyping)"
       ```
 
 - Paths: All file paths defined as variables at the top of the notebook.
