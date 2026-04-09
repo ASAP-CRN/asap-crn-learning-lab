@@ -1,5 +1,4 @@
-![https://parkinsonsroadmap.org/](https://parkinsonsroadmap.org/wp-content/uploads/2020/10/cropped-ASAP_Logo_FullColor@2x.png) 
-
+![ASAP logo](images/ASAP-CRN_logo.png)
 # ASAP CRN Learning Lab
 
 Reproducible tutorials and analysis examples for working with ASAP CRN data to spark new discoveries in Parkinson's disease.
