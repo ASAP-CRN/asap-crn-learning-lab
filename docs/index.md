@@ -7,11 +7,12 @@
     
 # ASAP CRN Learning Lab
 
-Welcome to the **ASAP CRN Learning Lab**, a resource designed to support researchers working with **ASAP CRN** (Aligning Science Across Parkinson’s Collaborative Research Network) data. 
-
-This site offers a **progressive, modular learning path**: start at the beginning for a full onboarding experience, or dive directly into the sections most relevant to your work. 
+A modular learning resource for researchers working with ASAP CRN data
 
 You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
+
+:octicons-arrow-right-24: Get Started{ .md-button .md-button--primary }
+:octicons-repo-24: GitHub Repository{ .md-button }
 
 ---
 
@@ -33,7 +34,7 @@ Requesting Access via the ASAP CRN Cloud:
 
 Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the ASAP CRN Cloud.
 
-For detailed instructions on the access process, see the  
+!!!tip For detailed instructions on the access process, see the  
 📘 [ASAP CRN Cloud User Manual (PDF)](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf)
 
 ---
