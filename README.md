@@ -40,7 +40,7 @@ Analysis examples with a specific biological objective. Each case study includes
 
 | Case study | Description |
 |------------|-------------|
-| [`01_SN-celltyping-analysis/`](case_studies/01_SN-celltyping-analysis/) | Cell-type annotation and analysis in the substantia nigra |
+| [`SN_CellType_Annotation/`](case_studies/SN_CellType_Annotation/) | Cell-type annotation and analysis in the substantia nigra |
 
 
 ## Repository Structure
