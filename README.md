@@ -59,7 +59,9 @@ asap-crn-learning-lab/
 │       └── 03_downstream_analysis.ipynb
 │       └── environment.yml
 ├── case_studies/              # Analyses with a biological objective
-│   ├── 01_SN-celltyping-analysis.ipynb 
+│   ├── SN_CellType_Annotation
+│       ├──sn_celltyping__part01_setup.ipynb
+│       ├──sn_celltyping__part02_preprocessing.ipynb
 │       ├── environment.yml
 │       └── README.md
 ├── mkdocs.yml
