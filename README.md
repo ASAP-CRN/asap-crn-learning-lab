@@ -1,4 +1,4 @@
-![ASAP logo](images/ASAP-CRN_logo.png)
+![ASAP logo](./docs/images/ASAP-CRN_logo.png)
 # ASAP CRN Learning Lab
 
 Reproducible tutorials and analysis examples for working with ASAP CRN data to spark new discoveries in Parkinson's disease.
