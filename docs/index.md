@@ -1,9 +1,5 @@
 
 ![ASAP logo](images/ASAP-CRN_logo.png){ width="600" align="center" }
-
-!!! note "ASAP CRN data workflow"
-    **Request access & discover data** in the [ASAP CRN Data Portal](https://cloud.parkinsonsroadmap.org/collections) → **Analyze data** in Verily Workbench. 
-    For access steps, see [Prerequisite: Data Access](#prerequisite-asap-crn-cloud-data-access)
     
 # ASAP CRN Learning Lab
 
@@ -11,9 +7,10 @@ A modular learning resource for researchers working with ASAP CRN data
 
 You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
 
-:octicons-arrow-right-24: Get Started{ .md-button .md-button--primary }
-:octicons-repo-24: GitHub Repository{ .md-button }
-
+!!! note "ASAP CRN data workflow"
+    **Request access & discover data** in the [ASAP CRN Data Portal](https://cloud.parkinsonsroadmap.org/collections) → **Analyze data** in Verily Workbench. 
+    For access steps, see [Prerequisite: Data Access](#prerequisite-asap-crn-cloud-data-access)
+    
 ---
 
 ## Prerequisite: ASAP CRN Cloud Data Access
