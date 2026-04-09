@@ -3,9 +3,7 @@
     
 # ASAP CRN Learning Lab
 
-A modular learning resource for researchers working with ASAP CRN data
-
-You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
+A modular learning resource for researchers working with ASAP CRN data. You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
 
 !!! note "ASAP CRN data workflow"
     **Request access & discover data** in the [ASAP CRN Data Portal](https://cloud.parkinsonsroadmap.org/collections) → **Analyze data** in Verily Workbench. 
@@ -31,8 +29,8 @@ Requesting Access via the ASAP CRN Cloud:
 
 Once your request is approved, you will receive an email confirming that your account has been granted access to the available collections through the ASAP CRN Cloud.
 
-!!!tip For detailed instructions on the access process, see the  
-📘 [ASAP CRN Cloud User Manual (PDF)](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf)
+> [!TIP]
+> For detailed instructions on the access process, see the 📘 [ASAP CRN Cloud User Manual (PDF)](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf)
 
 ---
 
