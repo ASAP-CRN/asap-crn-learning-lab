@@ -1,49 +1,119 @@
-# README 
+# Substantia Nigra Single-Cell Cell Typing Case Study
 
-Runnable notebook that extracts substantia nigra neurons from the full cohort runs MapMyCells with the Human-Mammalian Brain Basal Ganglia taxonomy, curates high‑confidence dopaminergic cells and outputs gene x cell type matrices
+This case study demonstrates a practical workflow for extracting **Substantia Nigra (SN)** cells from a larger cohort, preprocessing the data, and performing **reference-based cell type annotation** using **MapMyCells**.
 
-Attempts to train a scANVI model, validate labels with scib, and export a gene by cell type matrix. *requires better scANVI model to retain rare cell type populations*
+The workflow is organized into three modular notebooks designed to be run sequentially.
 
-## Prerequisites
-- Environment: Conda env `scvi-cells` with `scanpy`, `scvi-tools`, `cell_type_mapper`, `mygene`,and `decoupler`.
+## Case Study Goals
 
-    - How to set up conda environment
+By completing this workflow, users will learn how to:
 
-      ```bash
-        #in a terminal
-        conda env create -f environment.yml
-        conda init 
-        ## at this point restart your terminal
-        conda activate sn_celltyping
-        # ensure jupyter can recognize the new conda environemnt
-        python -m ipykernel install --user --name=sn_celltyping --display -name "Python (sn_celltyping)"
-      ```
+- Subset a large cohort to a biologically relevant brain region
+- Prepare single-cell data for downstream annotation
+- Apply reference-based cell type mapping with MapMyCells
+- Validate dopaminergic neuron labels using canonical markers
+- Generate annotated outputs and pseudobulk matrices for downstream analysis
 
-- Paths: All file paths defined as variables at the top of the notebook.
+---
 
-## Pipeline Steps
-1. Workflow orientation: setting paths and directories
-2. Data Access & Integration: copying data to personal bucket, loading and integrating data and metadata
-3. Evaluate SN samples in cohort
-4. Subset cohort to SN region and re-introduce raw counts.
-    - In addition subset and save separate dataframe for SN neuronal cells, in case increasing granularity later. 
-5. Run MapMyCells on SN subset using Human-Mammalian Brain Basal Ganglia taxonomy. [more info](https://alleninstitute.github.io/abc_atlas_access/descriptions/HMBA-BG_dataset.html)
-   - Filter for high-confidence labels > 0.7 
-7.  Recompute HVGs and embeddings
-    - Normalize and log1p .X for downstream analysis
-    - Compute HVGs using layer="counts" and flavor="pearson-residuals". (using technique from [sc-rnaseq-wf](https://github.com/ASAP-CRN/sc-rnaseq-wf/blob/main/docker/sc_tools/scripts/main/process)
-    - Run PCA and neighbors using global scVI embedding and compute leiden clusters at 1.0 resolution
-8. Perform targeted manual validation of high-confidence DA cells from MapMyCells results (Manual QC for scANVI)
-    - Remove low-confidence assignments
-    - Confirm canonical DA markers are expressed in DA cluster & overlap with MapMyCells labels
-9. Export refined MapMyCells results as round1 of gene x matrix. **This may be good enough for now.**
-    - Exporting both sum and median gene counts per cell type. Median might be best for table output on 
-10. Train & Predict with scANVI
-    **Results**: *ended up collapsing DA cluster, so would need to retrain, falling back to refined MapMyCells results*
-    - *OPTIONAL ADDITION*: Downsample labeled populations to equalize class sizes and retain highest confidence samples.
-    - Initialize scANVI and train with curated labels with GPU notebook.
-    - Flag or remove low confidence or ambiguous cells.
-13. Validate Labels 
-    - SCIB-metrics *If scANVI model is refined*
-14. Export gene by cell type matrix
-    - Aggregate expression by final labels and save a gene x cell type matrix. 
+# Notebook Modules
+
+## Part 01 — Setup
+
+📄 `sn_celltyping__part01_setup.ipynb`
+
+Initial project configuration and data access.
+
+### Covers:
+
+- Define paths and output directories
+- Copy data to personal workspace bucket
+- Load AnnData objects and metadata
+- Review cohort structure and available samples
+- Prepare inputs for downstream processing
+
+---
+
+## Part 02 — Processing
+
+📄 `sn_celltyping__part02_processing.ipynb`
+
+Subset and preprocess Substantia Nigra cells from the full cohort.
+
+### Covers:
+
+- Identify and subset SN-region samples
+- Restore raw counts
+- Standard preprocessing workflows
+- Feature selection and embeddings
+- Save processed SN dataset for annotation
+
+---
+
+## Part 03 — MapMyCells Annotation
+
+📄 `sc_celltyping__part03_mapmycells.ipynb`
+
+Perform reference-based cell type annotation using the Allen Institute Human-Mammalian Brain Basal Ganglia taxonomy.
+
+### Covers:
+
+- Run MapMyCells taxonomy mapping
+- Standardize returned labels and confidence metrics
+- Validate dopaminergic labels using marker genes
+- Refine annotations with confidence thresholds
+- Export annotated data and pseudobulk outputs
+
+Reference taxonomy:  
+https://alleninstitute.github.io/abc_atlas_access/descriptions/HMBA-BG_dataset.html
+
+---
+
+# Primary Outputs
+
+This workflow may generate:
+
+- **Processed SN AnnData (`.h5ad`)**
+- **Annotated AnnData with cell type labels**
+- **Pseudobulk matrices** (all / case / control)
+- **Cell type summary tables**
+- **UMAP and QC figures**
+
+---
+
+# Environment
+
+Recommended conda environment includes:
+
+- `scanpy`
+- `scvi-tools`
+- `cell_type_mapper`
+- `mygene`
+
+## Example Setup
+
+```bash
+conda env create -f environment.yml
+conda activate sn_celltyping
+python -m ipykernel install --user --name=sn_celltyping --display-name "Python (sn_celltyping)"
+```
+
+# Suggested Compute Environemnt (based on Verily Workbench Resources) 
+| Resource     | Value         |
+| ------------ | ------------- |
+| Machine type | n1-highmem-16 |
+| CPUs         | 16            |
+| Memory       | 104 GB        |
+| Disk         | 500 GB        |
+| Autostop     | 1 hour        |
+
+
+# Notes 
+- This workflow emphasizes reference-based annotation using MapMyCells.
+- Additional label transfer methods such as scANVI may be explored as optional extensions.
+- Confidence thresholds may be tuned depending on dataset characteristics.
+- Rare cell populations may require extra care during model-based label transfer.
+
+# Additional Resources
+Explore more workflows and tutorials in the ASAP-CRN Learning Lab:
+(https://github.com/ASAP-CRN/asap-crn-learning-lab)[https://github.com/ASAP-CRN/asap-crn-learning-lab]
