@@ -14,7 +14,6 @@ By completing this workflow, users will learn how to:
 - Validate dopaminergic neuron labels using canonical markers
 - Generate annotated outputs and pseudobulk matrices for downstream analysis
 
----
 
 # Notebook Modules
 
@@ -32,7 +31,6 @@ Initial project configuration and data access.
 - Review cohort structure and available samples
 - Prepare inputs for downstream processing
 
----
 
 ## Part 02 — Processing
 
@@ -48,7 +46,6 @@ Subset and preprocess Substantia Nigra cells from the full cohort.
 - Feature selection and embeddings
 - Save processed SN dataset for annotation
 
----
 
 ## Part 03 — MapMyCells Annotation
 
@@ -67,7 +64,6 @@ Perform reference-based cell type annotation using the Allen Institute Human-Mam
 Reference taxonomy:  
 https://alleninstitute.github.io/abc_atlas_access/descriptions/HMBA-BG_dataset.html
 
----
 
 # Primary Outputs
 
@@ -79,7 +75,6 @@ This workflow may generate:
 - **Cell type summary tables**
 - **UMAP and QC figures**
 
----
 
 # Environment
 
