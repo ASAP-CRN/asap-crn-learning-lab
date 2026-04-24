@@ -1,0 +1,53 @@
+current_release: v4
+
+releases:
+  - id: v4
+    tag: crn-data-v4
+    status: current
+    validated_on: 2026-04-24
+    notes: Current supported release
+    workspaces:
+      - name: CRN Learning Lab - PMDBS v4
+        link: https://workbench.verily.com/...
+        notes: Primary recommended workspace
+    data_collections:
+      - name: PMDBS scRNA-seq Collection v4
+        link: https://workbench.verily.com/...
+        notes: Recommended collection for current tutorials
+    tutorials:
+      - notebook: 01_getting_started.ipynb
+        datasets: [asap-cohort-pmdbs-sc-rnaseq]
+        workspace: CRN Learning Lab - PMDBS v4
+        data_collection: PMDBS scRNA-seq Collection v4
+        status: supported
+        notes: Primary onboarding notebook
+      - notebook: sn_celltyping_part01.ipynb
+        datasets: [asap-cohort-pmdbs-sc-rnaseq]
+        workspace: CRN Learning Lab - PMDBS v4
+        data_collection: PMDBS scRNA-seq Collection v4
+        status: supported
+        notes: Brain-region subsetting workflow
+    changelog:
+      added:
+        - Added support for PMDBS scRNA-seq tutorials against CRN Release v4
+        - Added recommended Verily Workbench workspace links for v4
+      updated:
+        - Updated dataset references for the v4 PMDBS cohort dataset
+        - Updated recommended data collections to current Verily Workbench resources
+      changed:
+        - Standardized tutorial references to release-based data collections
+
+  - id: v3
+    tag: crn-data-v3
+    status: archived
+    validated_on: 2025-11-10
+    notes: Historical compatibility
+    workspaces: []
+    data_collections: []
+    tutorials: []
+    changelog:
+      added:
+        - Added initial support for PMDBS scRNA-seq tutorial workflows
+      updated:
+        - Added workspace guidance for v3-compatible resources
+      changed: []
