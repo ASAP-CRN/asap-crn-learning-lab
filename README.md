@@ -62,6 +62,7 @@ asap-crn-learning-lab/
 │   ├── SN_CellType_Annotation
 │       ├──sn_celltyping__part01_setup.ipynb
 │       ├──sn_celltyping__part02_preprocessing.ipynb
+│       ├──sc_celltyping__part03_mapmycells.ipynb
 │       ├── environment.yml
 │       └── README.md
 ├── mkdocs.yml
