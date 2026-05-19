@@ -19,7 +19,7 @@ It is intended to help users identify:
 | Resource Type | Name | Purpose | Link | Notes |
 |---------------|------|---------|------|-------|
 | Workspace | `ASAP CRN Learning Lab Workspace` | Primary recommended workspace for current tutorials | [`https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4`](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)| 
-| Data Collection | `ASAP CRN Harmonized Data Collection` | Current recommended CRN data collection for this release | [`https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection`](https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection) |
+| Data Collection | `ASAP CRN Harmonized Data Collection` | Current recommended CRN data collection for this release | [`https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection`](https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection) | pmdbs-sc-rnaseq-v3
 
 ---
 
