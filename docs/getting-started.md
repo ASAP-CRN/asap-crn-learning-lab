@@ -33,7 +33,7 @@ Workspaces in **[Verily Workbench](https://workbench.verily.com)** are collabora
 The **ASAP CRN Learning Lab workspace** was created in conjunction with the [ASAP CRN Learning Lab GitHub repository](https://github.com/ASAP-CRN/asap-crn-learning-lab). It provides a pre-configured environment that mirrors the tutorials, scripts, and case studies included in this Learning Lab.
 
 **Open the workspace:**  
-[🔗 ASAP CRN Learning Lab ](https://workbench.verily.com/workspaces/asap-crn-learning-lab)
+[🔗 ASAP CRN Learning Lab ](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)
 
 !!! note
     The shared workspace is **view-only**. To run notebooks or make edits, you’ll need to **duplicate** it into your own project area.
@@ -43,7 +43,7 @@ The **ASAP CRN Learning Lab workspace** was created in conjunction with the [ASA
 
 Duplicating the Learning Lab workspace creates your own editable copy while preserving the original as a reference. This is required for all users so you can freely explore, test, and save work without affecting the shared environment.
 
-1. Open the **[ASAP CRN Learning Lab workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab)**.  
+1. Open the **[ASAP CRN Learning Lab workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)**.  
 2. Click the **Workspace menu (⋮)** in the upper-right corner.  
 
      ![Duplicate Workspace Form](images/screenshots/Verily-DuplicateWorkspace.png){ width="90%" align="center" .shadow}
