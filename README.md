@@ -34,6 +34,7 @@ Hands-on modules for building core skills with CRN Cloud data. Each series inclu
 | [`02_data_exploration.ipynb`](tutorials/00_pilot_workshop_series/02_data_exploration.ipynb) | Explore metadata, visualize distributions, and inspect quality |
 | [`03_downstream_analysis.ipynb`](tutorials/00_pilot_workshop_series/03_downstream_analysis.ipynb) | Run differential expression and basic statistical analyses |
 | [`Py3_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/Py3_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
+| [`R_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/PR_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
 
 ## Case studies
 
