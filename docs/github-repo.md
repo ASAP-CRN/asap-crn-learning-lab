@@ -16,10 +16,11 @@ Forking creates your team’s own copy of the repository so you can customize no
 1. Go to the Learning Lab repo on GitHub: 
    
     👉 [https://github.com/ASAP-CRN/asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab)
-2. Click **Fork** (top right)
+   
+3. Click **Fork** (top right)
     ![Fork Repo](images/screenshots/Github_Fork.png)
-3. Choose your organization or personal account as Owner of the forked repo. 
-4. Click **Create fork**
+4. Choose your organization or personal account as Owner of the forked repo. 
+5. Click **Create fork**
 
     !!! note "Note" 
         For more information on forking a github repository, see the official [GitHub documentation on Forking](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
