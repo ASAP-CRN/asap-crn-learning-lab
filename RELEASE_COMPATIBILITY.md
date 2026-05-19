@@ -18,8 +18,8 @@ It is intended to help users identify:
 
 | Resource Type | Name | Purpose | Link | Notes |
 |---------------|------|---------|------|-------|
-| Workspace | `ASAP CRN Reference Workspace` | Primary recommended workspace for current tutorials | `https://workbench.verily.com/workspaces/asap-crn-reference-workspace` | 
-| Data Collection | `ASAP CRN Harmonized Data Collection` | Current recommended CRN data collection for this release | `[https://workbench.verily.com/exchange/asap-crn-harmonized-data-collection` |
+| Workspace | `ASAP CRN Learning Lab Workspace` | Primary recommended workspace for current tutorials | [`https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4`](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)| 
+| Data Collection | `ASAP CRN Harmonized Data Collection` | Current recommended CRN data collection for this release | [`https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection`](https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection) |
 
 ---
 
@@ -39,8 +39,9 @@ It is intended to help users identify:
 
 | Tutorial / Notebook | Dataset(s) | Collection | Workspace | Data Collection | Status | Notes |
 |---------------------|------------|------------|-----------|-----------------|--------|-------|
-| `tutorials/00_pilot_workshop` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Reference Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
-| `case_studies/SN_CellType_Annotation` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Reference Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
+| `tutorials/00_pilot_workshop` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
+| `tutorials/Sample_Notebooks` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
+| `case_studies/SN_CellType_Annotation` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
 
 
 ---
