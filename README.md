@@ -61,6 +61,7 @@ asap-crn-learning-lab/
 │       └── environment.yml
 │   ├── Sample_Notebooks
 │       └──  Py3_Explore_ASAP_CRN_Data.ipynb
+│       └──  R_Explore_ASAP_CRN_Data.ipynb
 ├── case_studies/              # Analyses with a biological objective
 │   ├── SN_CellType_Annotation
 │       ├──sn_celltyping__part01_setup.ipynb
