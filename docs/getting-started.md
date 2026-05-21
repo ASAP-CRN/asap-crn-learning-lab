@@ -1,11 +1,11 @@
-# Getting Started with Verily Workbench
+# Getting Started with Utilizing CRN Data in Verily Workbench
 
 
-The **ASAP CRN Cloud** serves as the central platform for discovering, accessing, and governing ASAP CRN data collections. Once access has been approved, analyses can be conducted in **Verily Workbench**, the preferred analysis environment for all ASAP-CRN datasets.
+The **[ASAP CRN Cloud](https://cloud.parkinsonsroadmap.org/collections)** serves as the central platform for discovering, accessing, and governing ASAP CRN data collections. Once access has been approved, analyses can be conducted in [Verily Workbench](https://workbench.verily.com), the preferred analysis environment for all ASAP-CRN datasets.
 
 This guide walks you through the essentials of working in Verily Workbench, including how to access the ASAP CRN reference workspace, create and configure your own workspace, explore available resources, launch analysis apps, and connect external resources such as GitHub repositories.
 
-New users are encouraged to start with the **ASAP CRN reference workspace** in Verily Workbench, which includes integrated data, documentation, and example analyses. Once familiar, you may choose to create a clean workspace and add references to approved ASAP CRN data collections for your own analyses.
+New users are encouraged to start with the **[ASAP CRN Learning Lab Reference Workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)** in Verily Workbench, which includes integrated data, documentation, and example analyses. Once familiar, you may choose to create a clean workspace and add references to approved ASAP CRN data collections for your own analyses.
 
 ---
 
@@ -28,18 +28,12 @@ Workspaces in **[Verily Workbench](https://workbench.verily.com)** are collabora
 
 ---
 
-### Access the Learning Lab Workspace
+### Access & Duplicate the Learning Lab Workspace
 
 The **ASAP CRN Learning Lab workspace** was created in conjunction with the [ASAP CRN Learning Lab GitHub repository](https://github.com/ASAP-CRN/asap-crn-learning-lab). It provides a pre-configured environment that mirrors the tutorials, scripts, and case studies included in this Learning Lab.
 
-**Open the workspace:**  
-[🔗 ASAP CRN Learning Lab ](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)
-
 !!! note
     The shared workspace is **view-only**. To run notebooks or make edits, you’ll need to **duplicate** it into your own project area.
----
-
-### Duplicating a Workspace
 
 Duplicating the Learning Lab workspace creates your own editable copy while preserving the original as a reference. This is required for all users so you can freely explore, test, and save work without affecting the shared environment.
 
@@ -93,7 +87,7 @@ Once you locate a file of interest, you can quickly view or download it without 
 !!! tip 
     To open the file in **Google Cloud Platform (GCP)**, click **Open in GCP** in the upper-right corner above the details panel. This opens the linked Google Cloud Storage bucket in a new browser tab, where you can view the full directory and metadata.
 
-## 5. GitHub Repositories
+## 4. GitHub Repositories
 
 Your duplicated **ASAP-CRN Learning Lab workspace** should already have the **Learning Lab GitHub repository** connected. This ensures that all tutorial notebooks and example files are automatically available when you launch an App.
 
@@ -107,7 +101,7 @@ Your duplicated **ASAP-CRN Learning Lab workspace** should already have the **Le
 The ASAP-CRN Learning Lab is managed in GitHub and can be linked directly to your Verily Workbench workspace. You can either use the repository as-is or fork it if you plan to customize or contribute changes.
 
 For full details on forking, reusing, and contributing with GitHub, see:
-👉 [Working with Github](github-repo.md)
+👉 [Working with GitHub](github-repo.md)
 
 ---
 
@@ -132,7 +126,7 @@ Once connected, the repository will be **automatically cloned to your app enviro
 
 (See the [Working with GitHub](github-repo.md) page for details.)
 
-## 6. Apps
+## 5. Apps
 
 Apps are cloud-based environments in Verily Workbench that let you run code, explore data, and manage analysis workflows. Each workspace can host multiple apps such as **JupyterLab**, **RStudio**, or **Visual Studio Code**, which are connected to your data and GitHub repositories.
 
@@ -175,3 +169,15 @@ You can pause or delete apps from the **Apps** tab to manage costs or clean up e
 
 For additional details, refer to the  
 📘 [Verily Workbench Quickstart Guide – Create an App](https://support.workbench.verily.com/docs/getting_started/workspace_quickstart/#5-create-an-app)
+
+## Next Steps
+
+After duplicating the workspace and launching an app, you are ready to begin running Learning Lab notebooks.
+
+Start with:
+
+- [Python and R Sample Notebooks](../tutorials/Sample_Notebooks/)
+- [Pilot Workshop Series](../tutorials/00_pilot_workshop_series/)
+- [Substantia Nigra Cell-Type Annotation Case Study](../case_studies/SN_CellType_Annotation/)
+
+Use the sample notebooks for orientation, the workshop series for guided practice, and the case study for an applied research workflow.
