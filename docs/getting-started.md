@@ -170,7 +170,9 @@ You can pause or delete apps from the **Apps** tab to manage costs or clean up e
 For additional details, refer to the  
 📘 [Verily Workbench Quickstart Guide – Create an App](https://support.workbench.verily.com/docs/getting_started/workspace_quickstart/#5-create-an-app)
 
-## Next Steps
+---
+
+## 6. Next Steps
 
 After duplicating the workspace and launching an app, you are ready to begin running Learning Lab notebooks.
 
