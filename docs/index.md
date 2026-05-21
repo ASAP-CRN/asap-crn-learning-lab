@@ -38,6 +38,13 @@ Once your request is approved, you will receive an email confirming that your ac
 1. **Read the Starter Guide**  
    Begin with [Getting Started with Verily Workbench](getting-started.md) to learn how to connect to Verily Workbench and set up your workspace.
 
-2. **Choose Your Path**  
-    - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)** (3 parts) – a hands-on introduction to using Verily Workbench and performing an analysis with an example dataset.  
-    - *coming soon!*  **Case Studies** – curated examples that illustrate applied workflows and data-driven insights.
+2. **Choose Your Path**
+
+   - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)**  
+     Build core skills through a 3-part introduction to Verily Workbench, CRN Cloud data access, and exploratory analysis.
+
+   - **[Python and R Sample Notebooks](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/Sample_Notebooks)**  
+     Start with lightweight orientation notebooks that show how to find mounted resources, inspect metadata, and preview curated outputs.
+
+   - **[Substantia Nigra Cell-Type Annotation Case Study](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/case_studies/SN_CellType_Annotation)**  
+     Move into an applied research workflow using single-cell data from the substantia nigra. This case study walks through setup, preprocessing, MapMyCells reference mapping, marker-based validation, and export of analysis-ready outputs.
