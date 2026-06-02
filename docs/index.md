@@ -1,7 +1,7 @@
 
 ![ASAP logo](images/ASAP-CRN_logo.png){ width="600" align="center" }
     
-# ASAP CRN Learning Lab
+# Welcome to the ASAP CRN Learning Lab
 
 A modular learning resource for researchers working with ASAP CRN data. You can access all tutorials and resources on the [asap-crn-learning-lab](https://github.com/ASAP-CRN/asap-crn-learning-lab) Github repository.
 
@@ -39,11 +39,11 @@ Once your request is approved, you will receive an email confirming that your ac
    Begin with [Getting Started with Verily Workbench](getting-started.md) to learn how to connect to Verily Workbench and set up your workspace.
 
 2. **Choose Your Path**
-   - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)**  
+    - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)**  
      Build core skills through a 3-part introduction to Verily Workbench, CRN Cloud data access, and exploratory analysis.
 
-   - **[Python and R Sample Notebooks](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/Sample_Notebooks)**  
+    - **[Python and R Sample Notebooks](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/Sample_Notebooks)**  
      Start with lightweight orientation notebooks that show how to find mounted resources, inspect metadata, and preview curated outputs.
 
-    - **[Substantia Nigra Cell-Type Annotation Case Study](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/case_studies/SN_CellType_Annotation)**  
+     - **[Substantia Nigra Cell-Type Annotation Case Study](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/case_studies/SN_CellType_Annotation)**  
      Move into an applied research workflow using single-cell data from the substantia nigra. This case study walks through setup, preprocessing, MapMyCells reference mapping, marker-based validation, and export of analysis-ready outputs.
