@@ -7,9 +7,12 @@ repo_name: asap-crn-learning-lab
 # Only build from /docs
 docs_dir: docs
 
+extra_css:
+    - stylesheets/rosetta-stone.css
 extra_javascript:
   - javascripts/release-filter.js
   - javascripts/dataset-filter.js
+  - javascripts/rosetta-stone.js
 
 theme:
   name: material
