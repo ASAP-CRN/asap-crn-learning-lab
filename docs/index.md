@@ -39,7 +39,7 @@ Once your request is approved, you will receive an email confirming that your ac
    Begin with [Getting Started with Verily Workbench](getting-started.md) to learn how to connect to Verily Workbench and set up your workspace.
 
 2. **Choose Your Path**
-    - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/00_pilot_workshop_series)**  
+    - **[Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/Workshops/00_pilot_workshop_series)**  
      Build core skills through a 3-part introduction to Verily Workbench, CRN Cloud data access, and exploratory analysis.
 
     - **[Python and R Sample Notebooks](https://github.com/ASAP-CRN/asap-crn-learning-lab/tree/main/tutorials/Sample_Notebooks)**  

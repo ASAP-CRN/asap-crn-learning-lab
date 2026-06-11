@@ -5,7 +5,7 @@ The **[ASAP CRN Cloud](https://cloud.parkinsonsroadmap.org/collections)** serves
 
 This guide walks you through the essentials of working in Verily Workbench, including how to access the ASAP CRN reference workspace, create and configure your own workspace, explore available resources, launch analysis apps, and connect external resources such as GitHub repositories.
 
-New users are encouraged to start with the **[ASAP CRN Learning Lab Reference Workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)** in Verily Workbench, which includes integrated data, documentation, and example analyses. Once familiar, you may choose to create a clean workspace and add references to approved ASAP CRN data collections for your own analyses.
+New users are encouraged to start with the **[ASAP CRN Learning Lab Reference Workspace](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v5)** in Verily Workbench, which includes integrated data, documentation, and example analyses. Once familiar, you may choose to create a clean workspace and add references to approved ASAP CRN data collections for your own analyses.
 
 ---
 
@@ -179,7 +179,7 @@ After duplicating the workspace and launching an app, you are ready to begin run
 Start with:
 
 - [Python and R Sample Notebooks](../tutorials/Sample_Notebooks/)
-- [Pilot Workshop Series](../tutorials/00_pilot_workshop_series/)
+- [Pilot Workshop Series](../tutorials/Workshops/00_pilot_workshop_series/)
 - [Substantia Nigra Cell-Type Annotation Case Study](../case_studies/SN_CellType_Annotation/)
 
 Use the sample notebooks for orientation, the workshop series for guided practice, and the case study for an applied research workflow.
