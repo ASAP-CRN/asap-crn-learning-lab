@@ -9,17 +9,18 @@ It is intended to help users identify:
 
 ## Current Supported Release
 
-**Current CRN Release:** `v4`  
+**Current CRN Release:** `v5`  
 **Status:** `current`  
-**Validated on:** `2026-04-24`  
-**Repo tag:** `crn-v4`
+**Validated on:** `2026-06-11`  
+**Repo tag:** `crn-v5.0`
 
 ### Recommended Verily Workbench Resources
 
 | Resource Type | Name | Purpose | Link | Notes |
 |---------------|------|---------|------|-------|
-| Workspace | `ASAP CRN Learning Lab Workspace` | Primary recommended workspace for current tutorials | [`https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4`](https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v4)| 
-| Data Collection | `ASAP CRN Harmonized Data Collection` | Current recommended CRN data collection for this release | [`https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection`](https://workbench.verily.com/exchange/asap-crn-pmdbs-scrnaseq-collection) | pmdbs-sc-rnaseq-v3
+| Workspace | `ASAP CRN Learning Lab Workspace V5` | Primary recommended workspace for current tutorials |https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v5 | 
+| Data Collection | `PMDBS Single-cell RNAseq Collection V3` | Current recommended PMDBS scRNAseq data collection for this release |https://workbench.verily.com/data-collections/asap-crn-pmdbs-scrnaseq-collection |
+| Data Collection | `PMDBS Spatial RNAseq Collection V1` | Current recommended PMDBS Spatial data collection for this release | https://workbench.verily.com/data-collections/asap-crn-pmdbs-spatial-rnaseq-collection
 
 ---
 
@@ -27,21 +28,32 @@ It is intended to help users identify:
 
 | CRN Release | Repo Tag | Status | Validated On | Notes |
 |-------------|----------|--------|--------------|-------|
-| `v4` | `crn-v4` | `current` | `2026-04-24` | `compatible with v4 release of asap-crn` |
+| `v5` | `crn-v5.0` | `current` | `2026-06-11` | `compatible with v5 release of asap-crn` |
+| `v4` | `crn-v4.0` | `archived` | `2026-04-24` | `compatible with v4 release of asap-crn` |
 
 ---
 
 ## Tutorials by Release
 
+### CRN Release `v5`
+
+#### Supported tutorials
+
+| Tutorial / Notebook | Dataset(s) | Collection | Workspace | Data Collection | Status |
+|---------------------|------------|------------|-----------|-----------------|--------|
+| `tutorials/Workshops/00_pilot_workshop` | `cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace V5` | `PMDBS Single-cell RNAseq Collection V3` | `supported` |
+| `tutorials/Sample_Notebooks/` | `cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace V5` | `PMDBS Single-cell RNAseq Collection V3` | `supported` |
+| `tutorials/01_load_spatial_data_visium_geomx.ipynb` | `edwards-pmdbs-spatial-geomx-th`, `scherzer-pmdbs-spatial-visium-mtg` | `PMDBS` | `ASAP CRN Learning Lab Workspace V5` | `PMDBS Spatial RNAseq Collection V1` | `supported` |
+| `case_studies/SN_CellType_Annotation` | `cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace V5` | `PMDBS Single-cell RNAseq Collection V3` | `supported` |
+
 ### CRN Release `v4`
 
 #### Supported tutorials
 
-| Tutorial / Notebook | Dataset(s) | Collection | Workspace | Data Collection | Status | Notes |
-|---------------------|------------|------------|-----------|-----------------|--------|-------|
-| `tutorials/00_pilot_workshop` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
-| `tutorials/Sample_Notebooks` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
-| `case_studies/SN_CellType_Annotation` | `asap-curated-cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace` | `ASAP CRN Harmonized Data Collection` | `supported` |
+| Tutorial / Notebook | Dataset(s) | Collection | Workspace | Data Collection | Status
+|---------------------|------------|------------|-----------|-----------------|--------|
+| `tutorials/00_pilot_workshop` | `cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace V4` | `PMDBS Single-cell RNAseq Collection V3` | `supported` |
+| `case_studies/SN_CellType_Annotation` | `cohort-pmdbs-sc-rnaseq` | `PMDBS` | `ASAP CRN Learning Lab Workspace V4` | `PMDBS Single-cell RNAseq Collection V3` | `supported` | 
 
 
 ---

@@ -1,30 +1,68 @@
-current_release: v4
+current_release: v5
 
 releases:
-  - id: v4
-    tag: crn-data-v4
+  - id: v5
+    tag: crn-v5.0
     status: current
-    validated_on: 2026-04-24
+    validated_on: 2026-06-11
     notes: Current supported release
     workspaces:
-      - name: CRN Learning Lab - PMDBS v4
-        link: https://workbench.verily.com/...
+      - name: ASAP CRN Learning Lab Workspace V5
+        link: https://workbench.verily.com/workspaces/asap-crn-learning-lab-ws-v5
         notes: Primary recommended workspace
     data_collections:
-      - name: PMDBS scRNA-seq Collection v4
-        link: https://workbench.verily.com/...
+      - name: PMDBS Single-cell RNAseq Collection v3
+        link: https://workbench.verily.com/data-collections/asap-crn-pmdbs-scrnaseq-collection
+        notes: Recommended collection for PMDBS scRNAseq tutorials
+      - name: PMDBS Spatial RNAseq Collection V1
+        link: https://workbench.verily.com/data-collections/asap-crn-pmdbs-spatial-rnaseq-collection
+        notes: Recommended collection for PMDBS Spatial RNAseq tutorials
+    tutorials:
+      - notebook: tutorials/Sample_Notebooks/*.ipynb
+        datasets: [cohort-pmdbs-sc-rnaseq]
+        workspace: ASAP CRN Learning Lab Workspace V5
+        data_collection: PMDBS Single-cell RNAseq Collection V3
+        status: supported
+        notes: Preliminary Example Notebooks in both R and Python
+      - notebook: 01_load_spatial_data_visium_geomx.ipynb
+        datasets: [edwards-pmdbs-spatial-geomx-th, scherzer-pmdbs-spatial-visium-mtg]
+        workspace: ASAP CRN Learning Lab Workspace V5
+        data_collection: PMDBS Spatial RNAseq Collection V1
+        status: supported
+        notes: Introduction to loading Visium and GeoMx datasets
+    changelog:
+      added:
+        - Added support for PMDBS Spatial RNA-seq tutorial against CRN Release v5
+        - Added recommended Verily Workbench workspace links for v5
+      updated:
+        - Updated dataset references for the v3 PMDBS cohort dataset
+        - Updated recommended Verily Workbench workspace links for v5
+      changed:
+        - Standardized tutorial references to release-based data collections
+  - id: v4
+    tag: crn-v4.0
+    status: archived
+    validated_on: 2026-04-24
+    notes: Historical release
+    workspaces:
+      - name: ASAP CRN Learning Lab Workspace V4
+        link: https://workbench.verily.com/workspaces/asap-crn-reference-workspace-v4
+        notes: Primary recommended workspace
+    data_collections:
+      - name: PMDBS Single-cell RNAseq Collection V3
+        link: https://workbench.verily.com/data-collections/asap-crn-pmdbs-scrnaseq-collection
         notes: Recommended collection for current tutorials
     tutorials:
       - notebook: 01_getting_started.ipynb
         datasets: [asap-cohort-pmdbs-sc-rnaseq]
-        workspace: CRN Learning Lab - PMDBS v4
-        data_collection: PMDBS scRNA-seq Collection v4
+        workspace: ASAP CRN Learning Lab Workspace V4
+        data_collection: PMDBS Single-cell RNAseq Collection V3
         status: supported
         notes: Primary onboarding notebook
       - notebook: sn_celltyping_part01.ipynb
         datasets: [asap-cohort-pmdbs-sc-rnaseq]
-        workspace: CRN Learning Lab - PMDBS v4
-        data_collection: PMDBS scRNA-seq Collection v4
+        workspace: ASAP CRN Learning Lab Workspace V4
+        data_collection: PMDBS Single-cell RNAseq Collection V3
         status: supported
         notes: Brain-region subsetting workflow
     changelog:
@@ -32,22 +70,8 @@ releases:
         - Added support for PMDBS scRNA-seq tutorials against CRN Release v4
         - Added recommended Verily Workbench workspace links for v4
       updated:
-        - Updated dataset references for the v4 PMDBS cohort dataset
+        - Updated dataset references for the v3 PMDBS cohort dataset
         - Updated recommended data collections to current Verily Workbench resources
       changed:
         - Standardized tutorial references to release-based data collections
 
-  - id: v3
-    tag: crn-data-v3
-    status: archived
-    validated_on: 2025-11-10
-    notes: Historical compatibility
-    workspaces: []
-    data_collections: []
-    tutorials: []
-    changelog:
-      added:
-        - Added initial support for PMDBS scRNA-seq tutorial workflows
-      updated:
-        - Added workspace guidance for v3-compatible resources
-      changed: []
