@@ -30,11 +30,12 @@ Hands-on modules for building core skills with CRN Cloud data. Each series inclu
 
 | Notebook | Description |
 |----------|-------------|
-| [`01_getting_started.ipynb`](tutorials/00_pilot_workshop_series/01_getting_started.ipynb) | Connect to CRN Cloud and load your first dataset |
-| [`02_data_exploration.ipynb`](tutorials/00_pilot_workshop_series/02_data_exploration.ipynb) | Explore metadata, visualize distributions, and inspect quality |
-| [`03_downstream_analysis.ipynb`](tutorials/00_pilot_workshop_series/03_downstream_analysis.ipynb) | Run differential expression and basic statistical analyses |
+| [`01_getting_started.ipynb`](tutorials/Workshops/00_pilot_workshop_series/01_getting_started.ipynb) | Connect to CRN Cloud and load your first dataset |
+| [`02_data_exploration.ipynb`](tutorials/Workshops/00_pilot_workshop_series/02_data_exploration.ipynb) | Explore metadata, visualize distributions, and inspect quality |
+| [`03_downstream_analysis.ipynb`](tutorials/Workshops/00_pilot_workshop_series/03_downstream_analysis.ipynb) | Run differential expression and basic statistical analyses |
 | [`Py3_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/Py3_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
 | [`R_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/PR_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
+[`01_load_spatial_data_visium_geomx.ipynb](tutorials/Spatial_RNAseq/01_load_spatial_data_visium_geomx.ipynb) | Load Visium and GeoMx datasets into AnnData and explore spatial metadata and coordinates |
 
 ## Case studies
 
@@ -54,16 +55,21 @@ asap-crn-learning-lab/
 │   ├── index.md
 │   ├── getting-started.md
 │   └── images/
-├── tutorials/                 # General skill building
-│   ├── 00_pilot_workshop_series
-│       ├── 01_getting_started.ipynb
-│       ├── 02_data_exploration.ipynb
-│       └── environment.yml
-│   ├── Sample_Notebooks
-│       └──  Py3_Explore_ASAP_CRN_Data.ipynb
+├── tutorials/               # Learning resources and guided tutorials
+│   └── Sample_Notebooks   
+│       ├──  Py3_Explore_ASAP_CRN_Data.ipynb
 │       └──  R_Explore_ASAP_CRN_Data.ipynb
+│   └── Spatial_RNAseq          
+│       └── 01_load_spatial_data_visium_geomx.ipynb
+│   └── Workshops          
+│       └── 00_pilot_workshop_series
+│           ├── 01_getting_started.ipynb
+│           ├── 02_data_exploration.ipynb
+│           ├── 03_downstream_analysis.ipynb
+│           └── environment.yml
+
 ├── case_studies/              # Analyses with a biological objective
-│   ├── SN_CellType_Annotation
+│   └── SN_CellType_Annotation
 │       ├──sn_celltyping__part01_setup.ipynb
 │       ├──sn_celltyping__part02_preprocessing.ipynb
 │       ├──sc_celltyping__part03_mapmycells.ipynb
