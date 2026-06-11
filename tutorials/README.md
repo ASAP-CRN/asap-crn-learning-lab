@@ -8,6 +8,9 @@ These tutorials are designed to help users build practical skills with CRN Cloud
 
 ## Tutorial Paths
 
+## Getting Started
+New to the CRN Cloud? Start here.
+
 ### Sample Notebooks
 
 Quick-start notebooks for users who want a lightweight introduction to CRN Cloud data organization in Verily Workbench.
@@ -20,6 +23,20 @@ Quick-start notebooks for users who want a lightweight introduction to CRN Cloud
 **Recommended for:** first-time users, quick orientation, and users who want to understand the workspace layout before running deeper analyses.
 
 ---
+
+### Spatial RNA-seq
+
+Tutorials focused on spatial transcriptomics datasets, including Visium and GeoMx.
+
+| Notebook | Description |
+|---|---|
+| [`01_load_spatial_data_visium_geomx.ipynb`](Spatial_RNAseq/01_load_spatial_data_visium_geomx.ipynb) | Load Visium and GeoMx datasets into AnnData and explore spatial metadata and coordinates |
+
+**Recommended for:** users working with spatial transcriptomics datasets.
+
+--- 
+
+## Workshops
 
 ### Pilot Workshop Series
 
@@ -52,16 +69,17 @@ For setup instructions, see the [Getting Started Guide](https://asap-crn.github.
 
 ```plaintext
 tutorials/
-│
-├── 00_pilot_workshop_series/
-│   ├── 01_getting_started.ipynb
-│   ├── 02_data_exploration.ipynb
-│   ├── 03_downstream_analysis.ipynb
-│   └── environment.yml
-│
-└── Sample_Notebooks/
-    ├── Py3_Explore_ASAP_CRN_Data.ipynb
-    └── R_Explore_ASAP_CRN_Data.ipynb
+├── Sample_Notebooks/
+│   ├── Py3_Explore_ASAP_CRN_Data.ipynb
+│   └── R_Explore_ASAP_CRN_Data.ipynb
+├── Spatial_RNAseq
+│   └──01_load_spatial_data_visium_geomx.ipynb
+└── 00_pilot_workshop_series/
+    ├── 01_getting_started.ipynb
+    ├── 02_data_exploration.ipynb
+    ├── 03_downstream_analysis.ipynb
+    └── environment.yml
+
 ```
 --- 
 ## Next Steps
