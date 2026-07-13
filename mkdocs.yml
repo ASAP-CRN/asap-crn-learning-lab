@@ -48,13 +48,22 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-
-  - Getting Started:
-      - Overview: getting-started.md
-      - Working with GitHub: github-repo.md
-      - Troubleshooting: troubleshooting.md
-
+  - Getting Started with CRN Cloud:
+    - What is CRN Cloud?: getting-started/index.md
+    - Requesting Data Access: getting-started/requesting-data-access.md
+  - Verily Workbench Guide:
+      - Access & Your First Workspace: workbench/index.md
+      - Resources: workbench/resources.md
+      - GitHub Connection: workbench/github.md
+      - Apps: workbench/apps.md
+  - Working with Github: github/index.md
+  - scRNA-seq Pipeline Guide:
+      - Pipeline Overview, Key Decisions, QC Parameters: pipeline/index.md
+      - Outputs & File Structure: pipeline/outputs.md
   - CRN Cloud Rosetta Stone:
       - Overview: rosetta-stone/index.md
       - Datasets: rosetta-stone/datasets.md
       - Releases: rosetta-stone/releases.md
+  - Tutorials & Case Studies: tutorials/index.md  
+  - Troubleshooting & FAQs: troubleshooting.md
+  - Glossary: glossary.md
