@@ -11,7 +11,7 @@ Three ideas are worth knowing before anything else:
 
 ## Recap: How the pieces fit together
 
-![CRN Cloud ecosystem: CRN Cloud Explorer, Verily Workbench, and GitHub, all hosted on Google Cloud Platform](../images/crncloud_workflow.png)
+![CRN Cloud ecosystem: CRN Cloud Explorer, Verily Workbench, and GitHub, all hosted on Google Cloud Platform](../images/crncloud_workflow.png){ width="80%" align="center" .shadow}
 
 | Pillar | Platform | What it's for |
 |---|---|---|
