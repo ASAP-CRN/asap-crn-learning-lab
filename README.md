@@ -35,7 +35,7 @@ Hands-on modules for building core skills with CRN Cloud data. Each series inclu
 | [`03_downstream_analysis.ipynb`](tutorials/Workshops/00_pilot_workshop_series/03_downstream_analysis.ipynb) | Run differential expression and basic statistical analyses |
 | [`Py3_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/Py3_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
 | [`R_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/PR_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench |
-[`01_load_spatial_data_visium_geomx.ipynb`](tutorials/Spatial_RNAseq/01_load_spatial_data_visium_geomx.ipynb) | Load Visium and GeoMx datasets into AnnData and explore spatial metadata and coordinates |
+[`01_load_spatial_data_visium_geomx.ipynb](tutorials/Spatial_RNAseq/01_load_spatial_data_visium_geomx.ipynb) | Load Visium and GeoMx datasets into AnnData and explore spatial metadata and coordinates |
 
 ## Case studies
 
