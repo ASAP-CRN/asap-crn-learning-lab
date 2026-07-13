@@ -42,4 +42,4 @@ or clone directly from GitHub:
 - **Link the repo directly** if you just want to run or lightly explore existing notebooks.
 - **Fork it first**, then connect your fork's URL, if you plan to modify code or contribute changes back.
 
-For more in-depth information refer to [Working with GitHub](github-repo.md) 
+For more in-depth information refer to [Working with GitHub](../github/index.md) 
