@@ -1,11 +1,18 @@
 site_name: ASAP CRN Learning Lab
-site_description: Starter guide for ASAP-CRN on Verily Workbench
-site_url: https://asap-crn.github.io/learning-lab
+site_description: Starter guide and exploratory resource for ASAP-CRN on Verily Workbench
+site_url: https://asap-crn.github.io/learning-lab/
 repo_url: https://github.com/ASAP-CRN/asap-crn-learning-lab
 repo_name: asap-crn-learning-lab
 
 # Only build from /docs
 docs_dir: docs
+
+extra_css:
+    - stylesheets/rosetta-stone.css
+extra_javascript:
+  - javascripts/release-filter.js
+  - javascripts/dataset-filter.js
+  - javascripts/rosetta-stone.js
 
 theme:
   name: material
@@ -14,6 +21,8 @@ theme:
   features:
     - navigation.sections
     - navigation.instant
+    - navigation.expand
+    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -22,19 +31,39 @@ theme:
 
 plugins:
   - search
-  - pdf-export:
-      verbose: true
-      
+
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
   - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 
 nav:
   - Home: index.md
-  - Getting Started with Verily Workbench: getting-started.md
-  - Working with GitHub: github-repo.md
-  - Troubleshooting : troubleshooting.md
+  - Getting Started with CRN Cloud:
+    - What is CRN Cloud?: getting-started/index.md
+    - Requesting Data Access: getting-started/requesting-data-access.md
+  - Verily Workbench Guide:
+      - Access & Your First Workspace: workbench/index.md
+      - Resources: workbench/resources.md
+      - GitHub Connection: workbench/github.md
+      - Apps: workbench/apps.md
+  - Working with Github: github/index.md
+  - scRNA-seq Pipeline Guide:
+      - Pipeline Overview, Key Decisions, QC Parameters: pipeline/index.md
+      - Outputs & File Structure: pipeline/outputs.md
+  - CRN Cloud Rosetta Stone:
+      - Overview: rosetta-stone/index.md
+      - Datasets: rosetta-stone/datasets.md
+      - Releases: rosetta-stone/releases.md
+  - Tutorials & Case Studies: tutorials/index.md  
+  - Troubleshooting & FAQs: troubleshooting.md
+  - Glossary: glossary.md
