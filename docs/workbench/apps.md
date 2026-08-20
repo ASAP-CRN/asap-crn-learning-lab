@@ -36,7 +36,7 @@ You can stop or delete apps from the **Apps** tab to manage costs or clean up en
 - **Delete App** — Permanently removes the app. Make sure any important notebooks, scripts, or outputs are saved to GitHub, workspace storage, or another persistent location before deleting.
 
 !!! warning "Billing reminder"
-Always stop your app when you are finished working to avoid unnecessary compute costs. Some storage or persistent disk costs may still apply while the app is stopped.
+    Always stop your app when you are finished working to avoid unnecessary compute costs. Some storage or persistent disk costs may still apply while the app is stopped.
 
 For additional details, see the [Verily Workbench Quickstart Guide — Create an App](https://support.workbench.verily.com/docs/getting_started/workspace_quickstart/#5-create-an-app).
 
