@@ -46,8 +46,8 @@ After duplicating the workspace and launching an app, you're ready to start runn
 
 Start with:
 
-- [Python and R Sample Notebooks](../tutorials/Sample_Notebooks/)
-- [Pilot Workshop Series](../tutorials/Workshops/00_pilot_workshop_series/)
-- [Substantia Nigra Cell-Type Annotation Case Study](../case_studies/SN_CellType_Annotation/)
+- [Python and R Sample Notebooks](https://github.com/ASAP-CRN/asap-crn-learning-lab/blob/main/tutorials/Sample_Notebooks/)
+- [Pilot Workshop Series](https://github.com/ASAP-CRN/asap-crn-learning-lab/blob/main/tutorials/Workshops/00_pilot_workshop_series/)
+- [Substantia Nigra Cell-Type Annotation Case Study](https://github.com/ASAP-CRN/asap-crn-learning-lab/blob/main/case_studies/SN_CellType_Annotation/)
 
 Use the sample notebooks for orientation, the workshop series for guided practice, and the case study for an applied research workflow.
