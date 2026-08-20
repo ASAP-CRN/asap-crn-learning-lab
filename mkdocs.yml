@@ -56,7 +56,8 @@ nav:
       - Resources: workbench/resources.md
       - GitHub Connection: workbench/github.md
       - Apps: workbench/apps.md
-  - Working with Github: github/index.md
+      - Custom Apps: workbench/custom-apps.md
+  - Working with GitHub: github/index.md
   - scRNA-seq Pipeline Guide:
       - Pipeline Overview, Key Decisions, QC Parameters: pipeline/index.md
       - Outputs & File Structure: pipeline/outputs.md

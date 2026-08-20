@@ -24,7 +24,7 @@ A ***"Start Here"* reference workspace** is already set up in Verily Workbench t
 
 ## Establishing a spend profile
 
-Your personal workspace needs a spend profile or billing pos attached before you can duplicate or create your workspace.
+Your personal workspace needs a spend profile or billing pod attached before you can duplicate or create your workspace.
 
 - **General CRN members and non-CRN members:** email **workbench-support@verily.com** to have a spend profile established.
 - **Provisioned CRN member spend pod:** if you've been notified that you're part of this group, check the **Workspace details** panel on the right-hand side of your personal workspace and confirm you're assigned to the `asap-crn-gcp` pod.
