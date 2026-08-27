@@ -1,0 +1,18 @@
+#mamba env create -f testing.yml 
+
+name: ll-testing
+channels: 
+- conda-forge
+dependencies:
+- python=3.13
+- ipykernel
+- ipywidgets
+- notebook
+- pip
+- pip:
+  - scanpy
+  - pandas
+  - anndata
+  - harmonypy
+  - muon
+  - leidenalg

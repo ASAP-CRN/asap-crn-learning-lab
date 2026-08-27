@@ -1,0 +1,31 @@
+#mamba env create -f nb-cuda12.4.yml 
+
+name: nb-cuda
+channels:
+- conda-forge
+dependencies:
+- python=3.13
+- ipykernel
+- ipywidgets
+- notebook
+- click
+  - scvi-tools[cuda]
+  - scanpy
+  - pandas
+  - muon
+  - pymde
+  - tables
+  - scib-metrics
+  - harmonypy
+  - faiss-gpu-cu12
+  - leidenalg
+
+- pip
+- pip:
+  - torch --index-url https://download.pytorch.org/whl/cpu
+  - torchvision --index-url https://download.pytorch.org/whl/cpu
+  - jax[cuda12]
+  - jaxlib #=*=*cuda*
+  - "cell_type_mapper @ git+https://github.com/alleninstitute/cell_type_mapper.git@rc/v1.5.2"
+  - "abc_atlas_access[notebooks] @ git+https://github.com/alleninstitute/abc_atlas_access.git"
+  - mygene
