@@ -20,7 +20,7 @@ For detailed instructions, please see the [ASAP CRN Cloud User Manual](https://s
 ## Getting started
 
 > **First time here?** Head to our [Getting Started guide](https://asap-crn.github.io/asap-crn-learning-lab/) for the full onboarding experience — including how to request data access, set up Verily Workbench, and run your first notebook.
-> Feel free to also check out our [CRN Cloud Training Videos](https://youtu.be/HbPNLzo56Jo?si=blpISijaW23vNdOO)  for an introduction to the CRN Cloud.
+> Also check out our [CRN Cloud Training Videos](https://youtu.be/HbPNLzo56Jo?si=blpISijaW23vNdOO) for an introduction to the CRN Cloud.
 
 For help with Workbench setup, GitHub workflows, or common errors, see the [troubleshooting page](https://asap-crn.github.io/asap-crn-learning-lab/troubleshooting/).
 
