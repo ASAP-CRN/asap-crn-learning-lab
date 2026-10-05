@@ -1,0 +1,34 @@
+name: rare_celltype
+channels:
+  - conda-forge
+  - nodefaults            # avoid mixing in the defaults channel
+dependencies:
+  - python=3.11
+  - pip
+  - ipykernel
+
+  - pip:
+      # Torch built for CUDA 12.8 -- compatible with the Workbench driver (CUDA 12.9).
+      # Listed first so scvi-tools doesn't pull a newer CUDA 13 build.
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.8.0+cu128
+
+      # Single-cell stack
+      - anndata
+      - scanpy
+      - scvi-tools
+      - igraph
+      - harmonypy
+      - scib-metrics
+
+      # GCS access
+      - google-cloud-storage
+
+      # Utilities
+      - packaging            # Version() parsing in latest_release_uri
+      - matplotlib
+      - ipython-autotime>=0.3.2
+
+      # Allen cell type mapper. Do NOT pin abc-atlas-access separately --
+      # cell_type_mapper pulls it in itself (pinning it caused the pip conflict).
+      - git+https://github.com/AllenInstitute/cell_type_mapper
