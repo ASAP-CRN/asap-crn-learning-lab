@@ -207,13 +207,13 @@
 .rs-dataset-table th.sortable { white-space: normal; }
 
 /* Collection table column widths */
-.rs-collection-table th:nth-child(1), .rs-collection-table td:nth-child(1) { width: 22%; }
-.rs-collection-table th:nth-child(2), .rs-collection-table td:nth-child(2) { width: 10%; }
-.rs-collection-table th:nth-child(3), .rs-collection-table td:nth-child(3) { width: 12%; }
-.rs-collection-table th:nth-child(4), .rs-collection-table td:nth-child(4) { width: 12%; }
-.rs-collection-table th:nth-child(5), .rs-collection-table td:nth-child(5) { width: 12%; }
+.rs-collection-table th:nth-child(1), .rs-collection-table td:nth-child(1) { width: 19%; }
+.rs-collection-table th:nth-child(2), .rs-collection-table td:nth-child(2) { width: 9%; }
+.rs-collection-table th:nth-child(3), .rs-collection-table td:nth-child(3) { width: 15%; }
+.rs-collection-table th:nth-child(4), .rs-collection-table td:nth-child(4) { width: 10%; }
+.rs-collection-table th:nth-child(5), .rs-collection-table td:nth-child(5) { width: 13%; }
 .rs-collection-table th:nth-child(6), .rs-collection-table td:nth-child(6) { width: 10%; }
-.rs-collection-table th:nth-child(7), .rs-collection-table td:nth-child(7) { width: 13%; }
+.rs-collection-table th:nth-child(7), .rs-collection-table td:nth-child(7) { width: 15%; }
 .rs-collection-table th:nth-child(8), .rs-collection-table td:nth-child(8) { width: 9%;  white-space: nowrap; }
 
 /* Release table column widths */
@@ -386,7 +386,7 @@
   font-size: 0.68rem;
   font-weight: 600;
   font-family: monospace;
-  width: 34px;
+  width: 96px;
   flex-shrink: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -567,3 +567,76 @@
 .rs-release-version { font-family: monospace; font-size: 1rem; font-weight: 600; }
 .rs-release-meta    { font-size: 0.78rem; color: var(--md-default-fg-color--light); display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 .rs-release-section-body { padding: 0.75rem 1rem; overflow-x: auto; }
+
+/* ── Curation status badge ───────────────────────────────────────────────────── */
+.rs-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: monospace;
+  border: 1px solid;
+}
+.rs-badge > i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-right: 4px;
+}
+.rs-badge--added       { background: #e8f5ee; color: #0d6b3f; border-color: #6fcf97; }
+.rs-badge--updated     { background: #e8f0fb; color: #1a4fa0; border-color: #7baee8; }
+.rs-badge--unchanged   { background: #f0eeea; color: #5a5850; border-color: #bbb9b0; }
+.rs-badge--not-curated { background: #fef3e2; color: #8a5a00; border-color: #f0b429; }
+
+/* Dataset version that was new or updated in a release */
+.rs-change-badge {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 20px;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Long bucket paths: show in full instead of truncating */
+.rs-env-path--wrap {
+  white-space: normal;
+  overflow: visible;
+  word-break: break-all;
+}
+
+/* Drawer: curated outputs, one block per release */
+.rs-curated-item {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.rs-curated-item:last-child { border-bottom: none; }
+.rs-curated-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+.rs-curated-meta > .rs-curated-release { font-weight: 600; color: var(--md-default-fg-color); }
+.rs-curated-item .rs-env-row { padding-bottom: 0; border-bottom: none; }
+
+/* Release page: datasets carried forward unchanged */
+.rs-carried { margin-top: 0.75rem; }
+.rs-carried > summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  padding: 0.35rem 0;
+}
+.rs-carried[open] > summary { margin-bottom: 0.5rem; }
+
+/* Collection page: version history under each member table */
+.rs-collection-versions { margin: 1rem 0 2rem; }

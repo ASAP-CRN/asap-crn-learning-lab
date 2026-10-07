@@ -45,12 +45,13 @@ function initDatasetPage() {
       var rowCol  = (row.getAttribute("data-collection") || "").toLowerCase();
       var rowTags = (row.getAttribute("data-tags")       || "").toLowerCase();
 
+      var relList = rowR.split("||").map(function(s){ return s.trim(); }).filter(Boolean);
       var cdeList = rowC.split("||").map(function(s){ return s.trim(); }).filter(Boolean);
       var tagList = rowTags.split("||").map(function(s){ return s.trim(); }).filter(Boolean);
 
       var ok = (
         (q      === "" || text.includes(q))              &&
-        (selR   === "" || rowR === selR)                  &&
+        (selR   === "" || relList.includes(selR))         &&
         (selC   === "" || cdeList.includes(selC))         &&
         (selCol === "" || rowCol === selCol)               &&
         (selTag === "" || tagList.includes(selTag))

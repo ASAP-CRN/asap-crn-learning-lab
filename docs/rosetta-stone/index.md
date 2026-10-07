@@ -16,7 +16,8 @@ Use this section when you need to:
 
 | Page                                  | Purpose                                                                                                    |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [Dataset Finder](datasets.md)         | Search and filter datasets. View dataset versions, curation details, release history, and bucket paths.    |    |
+| [Dataset Finder](datasets.md)         | Search and filter datasets. View dataset versions, curation details, release history, and bucket paths.    |
+| [Collection Manifest](collections.md) | Review which datasets belong to each collection, each collection's version history, and where files resolve. |
 | [Release View](releases.md)           | See what changed in each CRN Cloud release, including added, updated, unchanged, and not curated datasets. |
 
 ## Curation Status Legend
@@ -68,7 +69,9 @@ Google Cloud Storage paths where files are stored.
 
 Use the **Dataset Finder** when you know the dataset name and want to find its versions, curation history, and bucket paths.
 
+Use the **Collection Manifest** when you want to see which datasets a collection contains and how its versions map to CRN Cloud releases.
+
 Use the **Release View** when you want to understand what changed between CRN Cloud releases.
 
 !!! tip "Version numbers are not interchangeable"
-Dataset versions, collection versions, CRN Cloud releases, CDE schema versions, and pipeline versions track different things. Always check which version type you are using before citing, downloading, or comparing data. For definitions on the types of versions, refer to the [Glossary](../glossary.md)
+    Dataset versions, collection versions, CRN Cloud releases, CDE schema versions, and pipeline versions track different things. Always check which version type you are using before citing, downloading, or comparing data. For definitions on the types of versions, refer to the [Glossary](../glossary.md)
