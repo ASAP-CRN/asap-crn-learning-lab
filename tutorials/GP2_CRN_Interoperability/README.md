@@ -2,7 +2,7 @@
 
 Link ASAP CRN PMDBS sc/snRNA-seq samples to GP2 participants, and add GP2 study, phenotype, and genetic data availability (NBA, WGS) to each CRN sample. This is the first step toward analyses that combine CRN single-cell data with GP2 genetics.
 
-**Notebook:** [`GP2_CRN_Interoperability.ipynb`](GP2_CRN_Interoperability.ipynb)
+**Notebook:** [`GP2_ASAPCRN_Interoperability.ipynb`](GP2_ASAPCRN_Interoperability.ipynb)
 **Built in:** [GP2 × ASAP CRN Verily Workbench workspace](https://workbench.verily.com/workspaces/gp2)
 
 > ⚠️ **Built for the PMDBS sc/snRNA-seq collection and GP2 release 12.** Other CRN datasets or GP2 releases may use different file names, column names, or ID formats, so you may need to edit the notebook. The most likely places to change are the GP2 release and file paths (Section 1), the GP2 ID cleaning (Section 2), the brain bank to GP2 study map (Section 2.2), and the GP2 column renames (Section 3).
