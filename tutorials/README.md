@@ -98,7 +98,7 @@ Link CRN PMDBS sc/snRNA-seq samples to [GP2](https://gp2.org) participants, and 
 
 | Notebook | Description |
 |---|---|
-| [`GP2_CRN_Interoperability.ipynb`](GP2_CRN_Interoperability/GP2_CRN_Interoperability.ipynb) | Clean GP2 IDs, join the GP2 master key onto CRN samples, and check match coverage and genetic data availability |
+| [`GP2_CRN_Interoperability.ipynb`](GP2_CRN_Interoperability/GP2_ASAPCRN_Interoperability.ipynb) | Clean GP2 IDs, join the GP2 master key onto CRN samples, and check match coverage and genetic data availability |
 
 **Before you start:** run [Metadata Assembly](#metadata-assembly) for the PMDBS cohort first. This tutorial also requires approved GP2 Tier 2 access.
 
