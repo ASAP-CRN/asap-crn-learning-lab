@@ -17,6 +17,8 @@ Before running any tutorials or case studies, users must request and receive app
 
 For detailed instructions, please see the [ASAP CRN Cloud User Manual](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-User-Manual.pdf).
 
+Tutorials that use [GP2](https://gp2.org) data, such as [`GP2_CRN_Interoperability/`](tutorials/GP2_CRN_Interoperability/), also require approved GP2 Tier 2 access. Contact [pm@gp2.org](mailto:pm@gp2.org) for GP2 workspace access.
+
 ## Getting started
 
 > **First time here?** Head to our [Getting Started guide](https://asap-crn.github.io/asap-crn-learning-lab/) for the full onboarding experience — including how to request data access, set up Verily Workbench, and run your first notebook.
@@ -27,7 +29,7 @@ For help with Workbench setup, GitHub workflows, or common errors, see the [trou
 
 ## Tutorials
  
-Hands-on modules for building core skills with CRN Cloud data. Each series includes its own `environment.yml`.
+Hands-on modules for building core skills with CRN Cloud data. Tutorials with extra dependencies include their own `environment.yml`, and tutorial folders include a `README.md` with instructions.
  
 | Notebook | Description |
 |----------|-------------|
@@ -38,6 +40,8 @@ Hands-on modules for building core skills with CRN Cloud data. Each series inclu
 | [`R_Explore_ASAP_CRN_Data.ipynb`](tutorials/Sample_Notebooks/R_Explore_ASAP_CRN_Data.ipynb) | Introduction to working with CRN Data on Verily Workbench (R) |
 | [`01_load_spatial_data_visium_geomx.ipynb`](tutorials/Spatial_RNAseq/01_load_spatial_data_visium_geomx.ipynb) | Load Visium and GeoMx datasets into AnnData and explore spatial metadata and coordinates |
 | [`Rare_Celltype_Analysis/`](tutorials/Rare_Celltype_Analysis/) | Subset one brain region from the PMDBS sc/snRNA-seq cohort, recover full-gene counts, annotate with MapMyCells, and integrate with scVI/scANVI to resolve a rare cell population. Worked example: dopaminergic neurons in the substantia nigra. Two notebooks: CPU app, then GPU app |
+| [`Metadata_Assembly/`](tutorials/Metadata_Assembly/) | Merge a cohort's SAMPLE, SUBJECT, and CLINPATH tables into one cleaned, sample-level metadata table, combining duplicate records and logging conflicts for review. Built for the PMDBS sc/snRNA-seq collection |
+| [`GP2_CRN_Interoperability/`](tutorials/GP2_CRN_Interoperability/) | Link CRN PMDBS sc/snRNA-seq samples to GP2 participants and add GP2 study, phenotype, and genetic data availability (NBA, WGS). Run `Metadata_Assembly/` first. Requires GP2 Tier 2 access |
 
 ## Case studies
 
@@ -50,8 +54,6 @@ Analysis examples with a specific biological objective. Each case study includes
 
 ## Repository Structure
 
-## Repository Structure
- 
 ```plaintext
 asap-crn-learning-lab/
 │
@@ -60,6 +62,12 @@ asap-crn-learning-lab/
 │   ├── getting-started.md
 │   └── images/
 ├── tutorials/                     # Learning resources and guided tutorials
+│   ├── GP2_CRN_Interoperability/
+│   │   ├── GP2_CRN_Interoperability.ipynb
+│   │   └── README.md
+│   ├── Metadata_Assembly/
+│   │   ├── Assembling_CRN_Metadata.ipynb
+│   │   └── README.md
 │   ├── Rare_Celltype_Analysis/
 │   │   ├── 01_cpu_subset_and_annotate.ipynb
 │   │   ├── 02_gpu_integrate_and_export.ipynb
@@ -83,11 +91,14 @@ asap-crn-learning-lab/
 │       ├── sn_celltyping__part03_mapmycells.ipynb
 │       ├── environment.yml
 │       └── README.md
+├── scripts/                       # Reusable helper modules
 ├── .github/
 │   └── workflows/
 │       └── build_docs.yml
 ├── mkdocs.yml
 ├── requirements-docs.txt
+├── RELEASE_COMPATIBILITY.md       # CRN Cloud releases each notebook was tested with
+├── changelog.md
 ├── LICENSE
 └── README.md
 ```
@@ -103,4 +114,3 @@ We welcome contributions from the ASAP-CRN community and the broader research ec
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
