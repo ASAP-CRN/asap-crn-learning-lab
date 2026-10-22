@@ -52,6 +52,12 @@ Analysis examples with a specific biological objective. Each case study includes
 | [`SN_CellType_Annotation/`](case_studies/SN_CellType_Annotation/) | Cell-type annotation and analysis in the substantia nigra. For a reusable version of this workflow that can target other regions and rare populations, see [`Rare_Celltype_Analysis/`](tutorials/Rare_Celltype_Analysis/) |
 
 
+## Additional Resources
+
+- **[ASAP Output Catalog: Datasets](https://parkinsonsroadmap.org/catalog/?_report_document_type=dataset)**: Browse datasets shared by ASAP-funded teams, with links to where each one is hosted. A good place to find related data to explore alongside CRN Cloud.
+- **[CRN Cloud Data Dictionary](https://storage.googleapis.com/asap-public-assets/wayfinding/ASAP-CRN-Cloud-Data-Dictionary.pdf)**: Metadata tables and curated outputs in CRN Cloud.
+- **[CRN Cloud Training Videos](https://youtu.be/HbPNLzo56Jo?si=blpISijaW23vNdOO)**: Video introduction to the CRN Cloud.
+  
 ## Repository Structure
 
 ```plaintext
