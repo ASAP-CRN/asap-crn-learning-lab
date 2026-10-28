@@ -1,0 +1,15 @@
+name: cohort_analysis
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Same Python as the sc-rnaseq-wf sc_tools Docker image
+  - python=3.12
+  - pip
+  - ipykernel
+
+  - pip:
+      # The sc-rnaseq-wf scripts as `sc-*` commands, pinned to the Docker image's versions,
+      # plus Allen's cell_type_mapper for MapMyCells. GPU builds of torch/jax: see sc-tools' cuda-env.yml
+      - "sc-tools[mmc] @ git+https://github.com/ASAP-CRN/sc-tools.git"
